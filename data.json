@@ -1,42 +1,24 @@
 [
   {
-    "id": "void-thunder",
-    "name": "Void Thunder",
-    "element": "Electro",
-    "setBonus": "2pc: Electro DMG +10%  |  5pc: Electro DMG +15% after Resonance Skill / Liberation hits",
+    "id": "winward-pilgrimage",
+    "name": "Winward Pilgrimage",
+    "element": "Aero",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Reminis. Flur",
     "characters": [
       {
-        "name": "Yinlin",
-        "element": "Electro",
+        "name": "Cardia",
+        "element": "Aero",
         "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Electro DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%", "HP%"], "1": ["HP%"] },
+        "substats": ["Energy Regen (15%)", "Crit Rate/DMG", "HP%", "Basic ATK Bonus"]
       },
       {
-        "name": "Calcharo",
-        "element": "Electro",
+        "name": "Arrow Rover",
+        "element": "Aero",
         "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Electro DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%"]
-      },
-      {
-        "name": "Xiangli Yao",
-        "element": "Electro",
-        "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Electro DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%", "HP%"], "1": ["HP%"] },
+        "substats": ["Energy Regen (15%)", "Crit Rate/DMG", "HP%", "Basic ATK Bonus"]
       }
     ]
   },
@@ -45,69 +27,145 @@
     "name": "Sierra Gale",
     "element": "Aero",
     "setBonus": "2pc: Aero DMG +10%  |  5pc: Aero DMG +15% after Resonance Skill / Liberation hits",
+    "mainEcho": "N. Monkey",
     "characters": [
       {
         "name": "Jiyan",
         "element": "Aero",
         "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Aero DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%"]
-      },
-      {
-        "name": "Yangyang",
-        "element": "Aero",
-        "role": "Support / Sub-DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Aero DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (25%)", "Crit Rate/DMG", "ATK%", "Heavy ATK Bonus"]
       },
       {
         "name": "Aalto",
         "element": "Aero",
         "role": "Support / Sub-DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Aero DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (25%)", "Crit Rate/DMG", "ATK%", "Heavy ATK Bonus"]
       }
     ]
   },
   {
-    "id": "celestial-light",
-    "name": "Celestial Light",
-    "element": "Spectro",
-    "setBonus": "2pc: Spectro DMG +10%  |  5pc: Spectro DMG +15% after Resonance Skill / Liberation hits",
+    "id": "gust-of-welken",
+    "name": "Gust of Welken",
+    "element": "Aero",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "N. Kelpie",
     "characters": [
       {
-        "name": "Jinhsi",
-        "element": "Spectro",
+        "name": "Chicona",
+        "element": "Aero",
         "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Spectro DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%"]
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (10%)", "Crit Rate/DMG", "ATK%"]
+      }
+    ]
+  },
+  {
+    "id": "crown-of-valor",
+    "name": "Crown of Valor",
+    "element": "Universal",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Lady of the Sea / False Sovereign",
+    "characters": [
+      {
+        "name": "Yuno",
+        "element": "Universal",
+        "role": "Main DPS (3pc)",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Elem DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (15-25%)", "Crit Rate/DMG", "Liberation/Heavy Bonus"]
       },
       {
-        "name": "Spectro Rover",
-        "element": "Spectro",
+        "name": "Augusta",
+        "element": "Electro",
+        "role": "Main DPS (3pc)",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Elem DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (15-25%)", "Crit Rate/DMG", "Liberation/Heavy Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "law-of-harmony",
+    "name": "Law of Harmony",
+    "element": "Aero",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Venrio",
+    "characters": [
+      {
+        "name": "Choya",
+        "element": "Aero",
         "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Spectro DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (25%)", "Crit Rate/DMG", "ATK%", "Heavy ATK Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "void-thunder",
+    "name": "Void Thunder",
+    "element": "Electro",
+    "setBonus": "2pc: Electro DMG +10%  |  5pc: Electro DMG +15% after Resonance Skill / Liberation hits",
+    "mainEcho": "N. Thundering Memphis",
+    "characters": [
+      {
+        "name": "Xiangli Yao",
+        "element": "Electro",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Electro DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Liberation Bonus"]
+      },
+      {
+        "name": "Calcharo",
+        "element": "Electro",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Electro DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Liberation Bonus"]
+      },
+      {
+        "name": "Augusta",
+        "element": "Electro",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Electro DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Liberation Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "flamewing-shadow",
+    "name": "Flamewing Shadow",
+    "element": "Fusion",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Chorosaurus",
+    "characters": [
+      {
+        "name": "Galbrena",
+        "element": "Fusion",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "ATK%", "Heavy ATK Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "flaming-claw-print",
+    "name": "Flaming Claw Print",
+    "element": "Fusion",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Lioness of Glory",
+    "characters": [
+      {
+        "name": "Lupa",
+        "element": "Fusion",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (25%)", "Crit Rate/DMG", "Liberation/Basic Bonus"]
+      },
+      {
+        "name": "Encore",
+        "element": "Fusion",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (25%)", "Crit Rate/DMG", "Liberation/Basic Bonus"]
       }
     ]
   },
@@ -115,196 +173,213 @@
     "id": "molten-rift",
     "name": "Molten Rift",
     "element": "Fusion",
-    "setBonus": "2pc: Fusion DMG +10%  |  5pc: Fusion DMG +15% after Resonance Skill / Liberation hits",
+    "setBonus": "2pc: Fusion DMG +10%  |  5pc: Fusion DMG +15% after Resonance Skill hits",
+    "mainEcho": "N. Inferno Rider",
     "characters": [
-      {
-        "name": "Encore",
-        "element": "Fusion",
-        "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Fusion DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%"]
-      },
       {
         "name": "Changli",
         "element": "Fusion",
         "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Fusion DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Skill/Basic Bonus"]
       },
       {
-        "name": "Brant",
+        "name": "Encore",
         "element": "Fusion",
         "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Fusion DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%"]
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Skill/Basic Bonus"]
+      },
+      {
+        "name": "Brandt",
+        "element": "Fusion",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Skill/Basic Bonus"]
       }
     ]
   },
   {
-    "id": "freezing-frost",
-    "name": "Freezing Frost",
+    "id": "frosty-resolve",
+    "name": "Frosty Resolve",
     "element": "Glacio",
-    "setBonus": "2pc: Glacio DMG +10%  |  5pc: Glacio DMG +15% after Normal / Heavy attacks hit",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Sentry Construct",
     "characters": [
       {
-        "name": "Sanhua",
+        "name": "Carla",
         "element": "Glacio",
-        "role": "Support / Sub-DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Glacio DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Glacio DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
+      },
+      {
+        "name": "Zapos",
+        "element": "Glacio",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Glacio DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
       },
       {
         "name": "Lingyang",
         "element": "Glacio",
         "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Glacio DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%"]
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Glacio DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "dream-of-the-lost",
+    "name": "Dream of the Lost",
+    "element": "Havoc",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "N. Hecate",
+    "characters": [
+      {
+        "name": "Phrolova",
+        "element": "Havoc",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Havoc DMG%"], "1": ["ATK%"] },
+        "substats": ["No ER needed", "Crit Rate/DMG", "ATK%", "Resonance Skill Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "midnight-veil",
+    "name": "Midnight Veil",
+    "element": "Havoc",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Lauri / N. Imp. Heron",
+    "characters": [
+      {
+        "name": "Canella",
+        "element": "Havoc",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Havoc DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (25-50%)", "Crit Rate/DMG", "Basic/Heavy ATK Bonus"]
       },
       {
-        "name": "Carlotta",
-        "element": "Glacio",
-        "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Glacio DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
+        "name": "Rocha",
+        "element": "Havoc",
+        "role": "Sub-DPS / Support",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Havoc DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (25-50%)", "Crit Rate/DMG", "Basic/Heavy ATK Bonus"]
       },
+      {
+        "name": "Phrolova",
+        "element": "Havoc",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Havoc DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (25-50%)", "Crit Rate/DMG", "Basic/Heavy ATK Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "spread-of-sever-fate",
+    "name": "Spread of Sever Fate",
+    "element": "Havoc",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Nodding Leviathan",
+    "characters": [
+      {
+        "name": "Chisa",
+        "element": "Havoc",
+        "role": "Sustain / Support",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Havoc DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (25%+)", "Crit Rate/DMG", "Liberation Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "pact-of-neon-light",
+    "name": "Pact of Neon Light",
+    "element": "Spectro",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Havia",
+    "characters": [
+      {
+        "name": "Len Kuro",
+        "element": "Spectro",
+        "role": "Buffer Build",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Spectro DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "ATK%", "Basic ATK Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "ride-of-gilded-rev",
+    "name": "Ride of Gilded Rev.",
+    "element": "Spectro",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Havia",
+    "characters": [
+      {
+        "name": "Len Kuro",
+        "element": "Spectro",
+        "role": "DPS Build",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Spectro DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "ATK%", "Basic ATK Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "eternal-radiance",
+    "name": "Eternal Radiance",
+    "element": "Spectro",
+    "setBonus": "Check in-game for set bonus details",
+    "mainEcho": "Capatanius",
+    "characters": [
+      {
+        "name": "Sunonni",
+        "element": "Spectro",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Spectro DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (10%)", "Crit Rate/DMG", "Heavy ATK Bonus"]
+      },
+      {
+        "name": "Phoebe",
+        "element": "Spectro",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Spectro DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (10%)", "Crit Rate/DMG", "Heavy ATK Bonus"]
+      },
+      {
+        "name": "Spectro Rover",
+        "element": "Spectro",
+        "role": "Main DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Spectro DMG%"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (10%)", "Crit Rate/DMG", "Heavy ATK Bonus"]
+      }
+    ]
+  },
+  {
+    "id": "empyrean-anthem",
+    "name": "Empyrean Anthem",
+    "element": "Universal",
+    "setBonus": "2pc: Energy Regen +10%  |  5pc: Resonance Skill Crit DMG +80% (works across elements)",
+    "mainEcho": "N. Tempest Memphis",
+    "characters": [
       {
         "name": "Zhezhi",
         "element": "Glacio",
         "role": "Sub-DPS / Buffer",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Glacio DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
-      }
-    ]
-  },
-  {
-    "id": "sun-sinking-eclipse",
-    "name": "Sun-sinking Eclipse",
-    "element": "Havoc",
-    "setBonus": "2pc: Havoc DMG +10%  |  5pc: Havoc DMG +15% after Resonance Skill / Liberation hits",
-    "characters": [
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Elem DMG%", "Energy Regen"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
+      },
       {
-        "name": "Danjin",
+        "name": "Yinlin",
+        "element": "Electro",
+        "role": "Main DPS / Sub-DPS",
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Elem DMG%", "Energy Regen"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
+      },
+      {
+        "name": "Canella",
         "element": "Havoc",
         "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Havoc DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "HP%"]
-      },
-      {
-        "name": "Havoc Rover",
-        "element": "Havoc",
-        "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Havoc DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
-      },
-      {
-        "name": "Camellya",
-        "element": "Havoc",
-        "role": "Main DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Havoc DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%"]
-      },
-      {
-        "name": "Roccia",
-        "element": "Havoc",
-        "role": "Sub-DPS / Support",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Havoc DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
-      }
-    ]
-  },
-  {
-    "id": "moonlit-clouds",
-    "name": "Moonlit Clouds",
-    "element": "Support",
-    "setBonus": "2pc: Energy Regen +10%  |  5pc: After Outro Skill, team ATK +22.5% for 15s",
-    "characters": [
-      {
-        "name": "Verina",
-        "element": "Spectro",
-        "role": "Healer / Buffer",
-        "costs": {
-          "4": ["Healing Bonus%", "HP%"],
-          "3": ["HP%", "ATK%"],
-          "1": ["HP%", "ATK%"]
-        },
-        "substats": ["HP%", "Energy Regen", "Healing Bonus%"]
-      },
-      {
-        "name": "Shorekeeper",
-        "element": "Spectro",
-        "role": "Healer / Buffer",
-        "costs": {
-          "4": ["HP%", "Healing Bonus%"],
-          "3": ["HP%"],
-          "1": ["HP%"]
-        },
-        "substats": ["HP%", "Energy Regen"]
-      },
-      {
-        "name": "Sanhua",
-        "element": "Glacio",
-        "role": "Support (buffer build)",
-        "costs": {
-          "4": ["ATK%", "Crit DMG"],
-          "3": ["ATK%", "Glacio DMG%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["ATK%", "Energy Regen", "Crit Rate", "Crit DMG"]
-      },
-      {
-        "name": "Mortefi",
-        "element": "Fusion",
-        "role": "Support / Sub-DPS",
-        "costs": {
-          "4": ["Crit DMG", "Crit Rate"],
-          "3": ["Fusion DMG%", "ATK%"],
-          "1": ["ATK%"]
-        },
-        "substats": ["Crit Rate", "Crit DMG", "ATK%", "Energy Regen"]
+        "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Elem DMG%", "Energy Regen"], "1": ["ATK%"] },
+        "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
       }
     ]
   },
@@ -313,39 +388,28 @@
     "name": "Rejuvenating Glow",
     "element": "Support",
     "setBonus": "2pc: Healing Bonus +10%  |  5pc: Healing buffs all team members' ATK by 15%",
+    "mainEcho": "Fallacy / Bell-Borne",
     "characters": [
       {
         "name": "Verina",
         "element": "Spectro",
-        "role": "Healer",
-        "costs": {
-          "4": ["Healing Bonus%", "HP%"],
-          "3": ["HP%"],
-          "1": ["HP%"]
-        },
-        "substats": ["HP%", "Energy Regen", "Healing Bonus%"]
+        "role": "Healer / Buffer",
+        "costs": { "4": ["Healing Bonus%", "Crit DMG", "Crit Rate"], "3": ["Energy Regen"], "1": ["HP%", "ATK%"] },
+        "substats": ["Energy Regen (230% total)", "HP%", "ATK%"]
+      },
+      {
+        "name": "Shorekeeper",
+        "element": "Spectro",
+        "role": "Healer / Buffer",
+        "costs": { "4": ["Healing Bonus%", "Crit DMG", "Crit Rate"], "3": ["Energy Regen"], "1": ["HP%", "ATK%"] },
+        "substats": ["Energy Regen (230% total)", "HP%", "ATK%"]
       },
       {
         "name": "Baizhi",
         "element": "Glacio",
         "role": "Healer",
-        "costs": {
-          "4": ["Healing Bonus%", "HP%"],
-          "3": ["HP%"],
-          "1": ["HP%"]
-        },
-        "substats": ["HP%", "Energy Regen"]
-      },
-      {
-        "name": "Shorekeeper",
-        "element": "Spectro",
-        "role": "Healer",
-        "costs": {
-          "4": ["Healing Bonus%", "HP%"],
-          "3": ["HP%"],
-          "1": ["HP%"]
-        },
-        "substats": ["HP%", "Energy Regen"]
+        "costs": { "4": ["Healing Bonus%", "Crit DMG", "Crit Rate"], "3": ["Energy Regen"], "1": ["HP%", "ATK%"] },
+        "substats": ["Energy Regen (230% total)", "HP%", "ATK%"]
       }
     ]
   }

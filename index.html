@@ -57,13 +57,14 @@
 
   /* ───── Element theme map ───── */
   const T = {
-    Electro: { color: "#b57bee", glow: "#7c3aed", dim: "rgba(124,58,237,0.10)", badge: "#1e0a38" },
-    Aero:    { color: "#4ade80", glow: "#16a34a", dim: "rgba(22,163,74,0.10)",   badge: "#041a0c" },
-    Spectro: { color: "#fbbf24", glow: "#d97706", dim: "rgba(217,119,6,0.10)",   badge: "#2a1500" },
-    Fusion:  { color: "#fb923c", glow: "#ea580c", dim: "rgba(234,88,12,0.10)",   badge: "#2a0e00" },
-    Glacio:  { color: "#67e8f9", glow: "#0891b2", dim: "rgba(8,145,178,0.10)",   badge: "#031520" },
-    Havoc:   { color: "#f87171", glow: "#dc2626", dim: "rgba(220,38,38,0.10)",   badge: "#200404" },
-    Support: { color: "#86efac", glow: "#16a34a", dim: "rgba(22,163,74,0.10)",   badge: "#041a0c" },
+    Electro:   { color: "#b57bee", glow: "#7c3aed", dim: "rgba(124,58,237,0.10)", badge: "#1e0a38" },
+    Aero:      { color: "#4ade80", glow: "#16a34a", dim: "rgba(22,163,74,0.10)",   badge: "#041a0c" },
+    Spectro:   { color: "#fbbf24", glow: "#d97706", dim: "rgba(217,119,6,0.10)",   badge: "#2a1500" },
+    Fusion:    { color: "#fb923c", glow: "#ea580c", dim: "rgba(234,88,12,0.10)",   badge: "#2a0e00" },
+    Glacio:    { color: "#67e8f9", glow: "#0891b2", dim: "rgba(8,145,178,0.10)",   badge: "#031520" },
+    Havoc:     { color: "#f87171", glow: "#dc2626", dim: "rgba(220,38,38,0.10)",   badge: "#200404" },
+    Support:   { color: "#86efac", glow: "#16a34a", dim: "rgba(22,163,74,0.10)",   badge: "#041a0c" },
+    Universal: { color: "#94a3b8", glow: "#475569", dim: "rgba(71,85,105,0.10)",   badge: "#0f1520" },
   };
 
   /* ───── CharacterCard ───── */
@@ -334,6 +335,12 @@
               <div style={{ color: "#4a6070", fontSize: 12, marginTop: 4, letterSpacing: "0.02em" }}>
                 {set.setBonus}
               </div>
+              {set.mainEcho && (
+                <div style={{ marginTop: 5, fontSize: 11, letterSpacing: "0.03em" }}>
+                  <span style={{ color: "#1e3040" }}>Main Echo: </span>
+                  <span style={{ color: theme.color + "bb" }}>{set.mainEcho}</span>
+                </div>
+              )}
             </div>
             <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
               <input
@@ -359,7 +366,11 @@
         )}
 
         {/* Characters grid */}
-        {filteredChars.length === 0 ? (
+        {set && set.characters.length === 0 ? (
+          <div style={{ color: "#3a4d65", fontSize: 14, padding: "40px 0", textAlign: "center", letterSpacing: "0.05em" }}>
+            No characters assigned to this set yet
+          </div>
+        ) : filteredChars.length === 0 ? (
           <div style={{ color: "#3a4d65", fontSize: 14, padding: "40px 0", textAlign: "center", letterSpacing: "0.05em" }}>
             No characters match "{search}"
           </div>
