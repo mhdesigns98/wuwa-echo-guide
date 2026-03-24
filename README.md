@@ -46,7 +46,7 @@ For each echo set you get:
 
 Just open the site and click any set tab. No account, no login, no install.
 
-👉 **[View the site](https://yourusername.github.io/wuwa-echo-guide)** ← update this link after deploying
+👉 **[View the site](https://mhdesigns98.github.io/wuwa-echo-guide/)**
 
 ## Updating the Data
 
