@@ -1,0 +1,2211 @@
+[
+  {
+    "id": "celestial-light",
+    "name": "Celestial Light",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Jinhsi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Spectro DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Resonance Skill DMG% > Flat ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "crown-of-valor",
+    "name": "Crown of Valor",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Augusta",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT Rate > CRIT DMG"
+          ],
+          "3": [
+            "Electro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% = Heavy Attack DMG% > ATK > Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Iuno",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > Resonance Liberation DMG% >= ATK% > ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dream-of-the-lost",
+    "name": "Dream of the Lost",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Phrolova",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Skill ATK DMG% > Flat ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "empyrean-anthem",
+    "name": "Empyrean Anthem",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Zhezhi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Glacio DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Comfortable) > CRIT RATE = CRIT DMG > Basic DMG% = ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Mortefi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Yinlin",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK = Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Yuanwu",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG > DEF%"
+          ],
+          "1": [
+            "DEF%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > DEF% > Flat DEF"
+        ]
+      },
+      {
+        "name": "Augusta",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT Rate > CRIT DMG"
+          ],
+          "3": [
+            "Electro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% = Heavy Attack DMG% > ATK > Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Chisa",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Liberation DMG% > ATK"
+        ]
+      },
+      {
+        "name": "Galbrena",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK > Heavy Attack DMG%"
+        ]
+      },
+      {
+        "name": "Qiuyuan",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Heavy Attack DMG% > ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "eternal-radiance",
+    "name": "Eternal Radiance",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Phoebe",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Spectro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK > Heavy ATK DMG%"
+        ]
+      },
+      {
+        "name": "Zani",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Spectro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > ATK"
+        ]
+      },
+      {
+        "name": "Rover Spectro",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Spectro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Flat ATK > Liberation DMG%"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "flamewings-shadow",
+    "name": "Flamewing's Shadow",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Galbrena",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK > Heavy Attack DMG%"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "flaming-clawprint",
+    "name": "Flaming Clawprint",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Lupa",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK > Liberation ATK DMG%"
+        ]
+      },
+      {
+        "name": "Encore",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK > Basic DMG% > Skill DMG%"
+        ]
+      },
+      {
+        "name": "Galbrena",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK > Heavy Attack DMG%"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "freezing-frost",
+    "name": "Freezing Frost",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Lingyang",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Glacio DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "frosty-resolve",
+    "name": "Frosty Resolve",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Carlotta",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Glacio DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) >= CRIT RATE = CRIT DMG > ATK% > Resonance Skill DMG > Flat ATK"
+        ]
+      },
+      {
+        "name": "Lingyang",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Glacio DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Phrolova",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Skill ATK DMG% > Flat ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gusts-of-welkin",
+    "name": "Gusts of Welkin",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Ciaccona",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Iuno",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > Resonance Liberation DMG% >= ATK% > ATK"
+        ]
+      },
+      {
+        "name": "Qiuyuan",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Heavy Attack DMG% > ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "halo-of-starry-radiance",
+    "name": "Halo of Starry Radiance",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Mornye",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "DEF% > Healing Bonus"
+          ],
+          "3": [
+            "Energy Regen"
+          ],
+          "1": [
+            "DEF%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until 260%) >>> Liberation DMG% > CRIT DMG > DEF% > CRIT Rate (until 20%) > ATK% > DEF > ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "law-of-harmony",
+    "name": "Law of Harmony",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Qiuyuan",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Heavy Attack DMG% > ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lingering-tunes",
+    "name": "Lingering Tunes",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Camellya",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Basic DMG% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Lingyang",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Glacio DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Calcharo",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK = Liberation DMG%"
+        ]
+      },
+      {
+        "name": "Jiyan",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT Rate > CRIT DMG"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK = Heavy DMG%"
+        ]
+      },
+      {
+        "name": "Xiangli Yao",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Flat ATK = Liberation DMG%"
+        ]
+      },
+      {
+        "name": "Augusta",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT Rate > CRIT DMG"
+          ],
+          "3": [
+            "Electro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% = Heavy Attack DMG% > ATK > Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Chisa",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Liberation DMG% > ATK"
+        ]
+      },
+      {
+        "name": "Phrolova",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Skill ATK DMG% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Galbrena",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK > Heavy Attack DMG%"
+        ]
+      },
+      {
+        "name": "Iuno",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > Resonance Liberation DMG% >= ATK% > ATK"
+        ]
+      },
+      {
+        "name": "Qiuyuan",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Heavy Attack DMG% > ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "midnight-veil",
+    "name": "Midnight Veil",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Cantarella",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT RATE = CRIT DMG > ATK% > Flat ATK = Basic ATK DMG%"
+        ]
+      },
+      {
+        "name": "Roccia",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) >= CRIT RATE > CRIT DMG > ATK% > Heavy ATK DMG% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Chisa",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Liberation DMG% > ATK"
+        ]
+      },
+      {
+        "name": "Danjin",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Flat ATK > Heavy DMG% > Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Phrolova",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Skill ATK DMG% > Flat ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "molten-rift",
+    "name": "Molten Rift",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Brant",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Energy Regen"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until 250%) > CRIT Rate = CRIT DMG > Energy Regen (Above 250%) > Basic Attack DMG% > ATK% > ATK"
+        ]
+      },
+      {
+        "name": "Changli",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK = Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Chixia",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Encore",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK > Basic DMG% > Skill DMG%"
+        ]
+      },
+      {
+        "name": "Galbrena",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK > Heavy Attack DMG%"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "moonlit-clouds",
+    "name": "Moonlit Clouds",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Danjin",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Flat ATK > Heavy DMG% > Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Jianxin",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK > Liberation DMG% > Heavy Attack DMG% > Basic Attack DMG%"
+        ]
+      },
+      {
+        "name": "Lumi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG > Energy Regen"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Mortefi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Rover Spectro",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Spectro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Flat ATK > Liberation DMG%"
+        ]
+      },
+      {
+        "name": "Sanhua",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Glacio DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Yangyang",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK > Liberation DMG% > Basic DMG%"
+        ]
+      },
+      {
+        "name": "Yinlin",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK = Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Baizhi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "Healing Bonus > HP%"
+          ],
+          "3": [
+            "Energy Regen"
+          ],
+          "1": [
+            "HP%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) > HP% > Flat HP"
+        ]
+      },
+      {
+        "name": "Cantarella",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT RATE = CRIT DMG > ATK% > Flat ATK = Basic ATK DMG%"
+        ]
+      },
+      {
+        "name": "Ciaccona",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Roccia",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) >= CRIT RATE > CRIT DMG > ATK% > Heavy ATK DMG% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Taoqi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "DEF%"
+          ],
+          "3": [
+            "Energy Regen > DEF%"
+          ],
+          "1": [
+            "DEF%"
+          ]
+        },
+        "substats": [
+          "Energy Regen% (until breakpoint) > Crit rate / Crit dmg > DEF% > DEF"
+        ]
+      },
+      {
+        "name": "The Shorekeeper",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > HP%"
+          ],
+          "3": [
+            "Energy Regen"
+          ],
+          "1": [
+            "HP%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until 130-140%) > CRIT DMG >= Liberation DMG% > HP% > CRIT Rate > HP > ATK% = ATK"
+        ]
+      },
+      {
+        "name": "Verina",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "Healing Bonus > ATK%"
+          ],
+          "3": [
+            "Energy Regen"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Youhu",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "Healing Bonus"
+          ],
+          "3": [
+            "Energy Regen > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until satisfied) = ATK% > FLAT ATK"
+        ]
+      },
+      {
+        "name": "Yuanwu",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG > DEF%"
+          ],
+          "1": [
+            "DEF%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > DEF% > Flat DEF"
+        ]
+      },
+      {
+        "name": "Zhezhi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Glacio DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Comfortable) > CRIT RATE = CRIT DMG > Basic DMG% = ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Aalto",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT Rate > CRIT DMG"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK >= Basic Attack DMG% > Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Augusta",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT Rate > CRIT DMG"
+          ],
+          "3": [
+            "Electro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% = Heavy Attack DMG% > ATK > Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Chisa",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Liberation DMG% > ATK"
+        ]
+      },
+      {
+        "name": "Galbrena",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Fusion DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK > Heavy Attack DMG%"
+        ]
+      },
+      {
+        "name": "Qiuyuan",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Heavy Attack DMG% > ATK"
+        ]
+      },
+      {
+        "name": "Iuno",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > Resonance Liberation DMG% >= ATK% > ATK"
+        ]
+      },
+      {
+        "name": "Iuno",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > Resonance Liberation DMG% >= ATK% > ATK"
+        ]
+      },
+      {
+        "name": "Qiuyuan",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Heavy Attack DMG% > ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pact-of-neonlight-leap",
+    "name": "Pact of Neonlight Leap",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Lynae",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Spectro DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK = Basic Attack DMG%"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rejuvenating-glow",
+    "name": "Rejuvenating Glow",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Baizhi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "Healing Bonus > HP%"
+          ],
+          "3": [
+            "Energy Regen"
+          ],
+          "1": [
+            "HP%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) > HP% > Flat HP"
+        ]
+      },
+      {
+        "name": "Buling",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG > Energy Regen"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK"
+        ]
+      },
+      {
+        "name": "Rover Aero",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT RATE = CRIT DMG > ATK% > Skill DMG% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Taoqi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "DEF%"
+          ],
+          "3": [
+            "Energy Regen > DEF%"
+          ],
+          "1": [
+            "DEF%"
+          ]
+        },
+        "substats": [
+          "Energy Regen% (until breakpoint) > Crit rate / Crit dmg > DEF% > DEF"
+        ]
+      },
+      {
+        "name": "The Shorekeeper",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > HP%"
+          ],
+          "3": [
+            "Energy Regen"
+          ],
+          "1": [
+            "HP%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until 130-140%) > CRIT DMG >= Liberation DMG% > HP% > CRIT Rate > HP > ATK% = ATK"
+        ]
+      },
+      {
+        "name": "Verina",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "Healing Bonus > ATK%"
+          ],
+          "3": [
+            "Energy Regen"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Youhu",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "Healing Bonus"
+          ],
+          "3": [
+            "Energy Regen > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until satisfied) = ATK% > FLAT ATK"
+        ]
+      },
+      {
+        "name": "Yuanwu",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG > DEF%"
+          ],
+          "1": [
+            "DEF%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > DEF% > Flat DEF"
+        ]
+      },
+      {
+        "name": "Mornye",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "DEF% > Healing Bonus"
+          ],
+          "3": [
+            "Energy Regen"
+          ],
+          "1": [
+            "DEF%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until 260%) >>> Liberation DMG% > CRIT DMG > DEF% > CRIT Rate (until 20%) > ATK% > DEF > ATK"
+        ]
+      },
+      {
+        "name": "Rover Spectro",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Spectro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Flat ATK > Liberation DMG%"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rite-of-gilded-revelation",
+    "name": "Rite of Gilded Revelation",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Luuk Herssen",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG / CRIT Rate"
+          ],
+          "3": [
+            "Spectro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT DMG = CRIT Rate > ATK% = Basic DMG% > ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sierra-gale",
+    "name": "Sierra Gale",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Aalto",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT Rate > CRIT DMG"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK >= Basic Attack DMG% > Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Jiyan",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT Rate > CRIT DMG"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK = Heavy DMG%"
+        ]
+      },
+      {
+        "name": "Iuno",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > Resonance Liberation DMG% >= ATK% > ATK"
+        ]
+      },
+      {
+        "name": "Qiuyuan",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Heavy Attack DMG% > ATK"
+        ]
+      },
+      {
+        "name": "Yangyang",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK > Liberation DMG% > Basic DMG%"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "thread-of-severed-fate",
+    "name": "Thread of Severed Fate",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Chisa",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Havoc DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Liberation DMG% > ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tidebreaking-courage",
+    "name": "Tidebreaking Courage",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Brant",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Energy Regen"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until 250%) > CRIT Rate = CRIT DMG > Energy Regen (Above 250%) > Basic Attack DMG% > ATK% > ATK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "void-thunder",
+    "name": "Void Thunder",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Calcharo",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK = Liberation DMG%"
+        ]
+      },
+      {
+        "name": "Xiangli Yao",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Flat ATK = Liberation DMG%"
+        ]
+      },
+      {
+        "name": "Augusta",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT Rate > CRIT DMG"
+          ],
+          "3": [
+            "Electro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% = Heavy Attack DMG% > ATK > Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Lumi",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG > Energy Regen"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Yinlin",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Electro DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Breakpoint) >= CRIT RATE = CRIT DMG > ATK% > Flat ATK = Resonance Skill DMG%"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "windward-pilgrimage",
+    "name": "Windward Pilgrimage",
+    "element": "Universal",
+    "setBonus": "Sourced from Prydwen.gg",
+    "mainEcho": "",
+    "characters": [
+      {
+        "name": "Cartethyia",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG"
+          ],
+          "3": [],
+          "1": [
+            "HP%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > HP% > Basic Attack DMG% = Liberation DMG% > HP"
+        ]
+      },
+      {
+        "name": "Aalto",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT Rate > CRIT DMG"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > ATK >= Basic Attack DMG% > Resonance Skill DMG%"
+        ]
+      },
+      {
+        "name": "Rover Aero",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT RATE = CRIT DMG > ATK% > Skill DMG% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Ciaccona",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "CRIT RATE = CRIT DMG > ATK% > Flat ATK"
+        ]
+      },
+      {
+        "name": "Iuno",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > Resonance Liberation DMG% >= ATK% > ATK"
+        ]
+      },
+      {
+        "name": "Qiuyuan",
+        "element": "Unknown",
+        "role": "TBD",
+        "costs": {
+          "4": [
+            "CRIT DMG > CRIT Rate"
+          ],
+          "3": [
+            "Aero DMG > ATK%"
+          ],
+          "1": [
+            "ATK%"
+          ]
+        },
+        "substats": [
+          "Energy Regen (Until Satisfied) > CRIT Rate = CRIT DMG > ATK% > Heavy Attack DMG% > ATK"
+        ]
+      }
+    ]
+  }
+]

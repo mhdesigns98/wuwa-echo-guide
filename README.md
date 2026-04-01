@@ -52,6 +52,49 @@ Just open the site and click any set tab. No account, no login, no install.
 
 All character and set data lives in **`data.json`**. The app fetches it at runtime, so you never need to touch `index.html` to update builds.
 
+## Database Pipeline (Prydwen Source)
+
+If you want to build this out as a real database (instead of only a front-end JSON file), there is now a starter pipeline:
+
+- `db/schema.sql` - normalized SQLite schema for echo sets, characters, and character/set build links.
+- `scripts/sync_prydwen_builds.py` - pulls character pages from Prydwen and extracts:
+  - best echo sets
+  - recommended 4/3/1-cost stats
+  - recommended substats
+- `scripts/build_sqlite.py` - loads the synced JSON into SQLite.
+- `scripts/export_app_data.py` - converts synced data into the current app `data.json` structure.
+
+### Run it
+
+From `wuwa-echo-guide`:
+
+```bash
+python3 scripts/sync_prydwen_builds.py
+python3 scripts/build_sqlite.py
+python3 scripts/export_app_data.py
+```
+
+This writes:
+
+- `db/prydwen_character_builds.json`
+- `db/wuwa_echoes.sqlite`
+- `data.prydwen.json`
+
+### Quick test run
+
+To test on only a few characters first:
+
+```bash
+python3 scripts/sync_prydwen_builds.py --limit 5
+python3 scripts/build_sqlite.py
+```
+
+### Notes
+
+- The extractor is intentionally conservative and targets the core data you asked for (echo sets, best-with characters, and substats).
+- Prydwen page structure can change over time, so validate a few records after each patch cycle.
+- Respect Prydwen's terms of use when pulling data.
+
 ### Adding or editing a character
 
 Open `data.json` and find the set you want to update. Each character follows this structure:
