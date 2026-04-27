@@ -51,7 +51,9 @@
 <script type="text/babel">
 const { useState, useMemo, useEffect, useRef } = React;
 
-const T = {
+// Fallback themes — used until data.json themes are loaded, and as a safety net
+// if a new element is added to data.json without a theme entry.
+const DEFAULT_THEMES = {
   Electro:   { color:"#c084fc", glow:"#7c3aed", dim:"rgba(124,58,237,0.12)",  badge:"#1e0a38" },
   Aero:      { color:"#4ade80", glow:"#16a34a", dim:"rgba(22,163,74,0.12)",   badge:"#041a0c" },
   Spectro:   { color:"#fcd34d", glow:"#d97706", dim:"rgba(217,119,6,0.12)",   badge:"#2a1500" },
@@ -62,11 +64,15 @@ const T = {
   Universal: { color:"#b0bfd0", glow:"#475569", dim:"rgba(71,85,105,0.12)",   badge:"#0f1520" },
 };
 
-const ELEMENTS = ["All","Electro","Aero","Spectro","Fusion","Glacio","Havoc","Support","Universal"];
+const LS_KEY = "wuwa-echo-guide:lastSetId";
 
-function CharacterCard({ char, setTheme }) {
+function getTheme(T, element) {
+  return T[element] || T.Universal || DEFAULT_THEMES.Universal;
+}
+
+function CharacterCard({ char, setTheme, T }) {
   const [hov, setHov] = useState(false);
-  const ct = T[char.element] || T.Universal;
+  const ct = getTheme(T, char.element);
   return (
     <div onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)} className="card-anim"
       style={{ background:"#080c18", borderRadius:10, border:`1px solid ${hov ? ct.color+"60" : "#182030"}`, overflow:"hidden", transition:"border-color 0.2s, box-shadow 0.2s", boxShadow: hov ? `0 4px 24px ${ct.glow}22` : "none" }}>
@@ -118,28 +124,60 @@ function CharacterCard({ char, setTheme }) {
 
 function App() {
   const [sets, setSets]             = useState([]);
+  const [T, setT]                   = useState(DEFAULT_THEMES);
   const [loading, setLoading]       = useState(true);
   const [error, setError]           = useState(null);
-  const [selectedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState(() => {
+    try { return localStorage.getItem(LS_KEY) || null; } catch { return null; }
+  });
   const [charSearch, setCharSearch] = useState("");
   const [setSearch, setSetSearch]   = useState("");
   const [elemFilter, setElemFilter] = useState("All");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const activeRef = useRef(null);
+  const searchInputRef = useRef(null);
 
   useEffect(() => {
     fetch("./data.json")
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then(data => { setSets(data); setSelectedId(data[0]?.id ?? null); setLoading(false); })
+      .then(data => {
+        // Support both old format (array) and new format ({ meta, sets })
+        const setsData = Array.isArray(data) ? data : (data.sets || []);
+        const themes   = (!Array.isArray(data) && data.meta?.themes) ? data.meta.themes : null;
+        if (themes) setT({ ...DEFAULT_THEMES, ...themes });
+        setSets(setsData);
+        // Restore last-viewed set, falling back to first set if stored ID no longer exists
+        setSelectedId(prev => {
+          const exists = setsData.some(s => s.id === prev);
+          return exists ? prev : (setsData[0]?.id ?? null);
+        });
+        setLoading(false);
+      })
       .catch(err => { setError(err.message); setLoading(false); });
   }, []);
+
+  // Persist selected set to localStorage whenever it changes
+  useEffect(() => {
+    if (selectedId) {
+      try { localStorage.setItem(LS_KEY, selectedId); } catch {}
+    }
+  }, [selectedId]);
 
   useEffect(() => {
     if (activeRef.current) activeRef.current.scrollIntoView({ block:"nearest", behavior:"smooth" });
   }, [selectedId]);
 
   const set   = sets.find(s => s.id === selectedId);
-  const theme = set ? (T[set.element] || T.Universal) : T.Universal;
+  const theme = set ? getTheme(T, set.element) : getTheme(T, "Universal");
+
+  // Derive element list dynamically from data so new elements need no code changes
+  const elements = useMemo(() => {
+    const seen = new Set(sets.map(s => s.element));
+    const order = ["Electro","Aero","Spectro","Fusion","Glacio","Havoc","Support","Universal"];
+    const sorted = order.filter(e => seen.has(e));
+    seen.forEach(e => { if (!sorted.includes(e)) sorted.push(e); });
+    return ["All", ...sorted];
+  }, [sets]);
 
   const filteredSets = useMemo(() => sets.filter(s => {
     const matchElem   = elemFilter === "All" || s.element === elemFilter;
@@ -158,7 +196,14 @@ function App() {
     );
   }, [set, charSearch]);
 
-  const selectSet = id => { setSelectedId(id); setCharSearch(""); setSidebarOpen(false); };
+  const selectSet = id => {
+    setSelectedId(id);
+    setCharSearch("");
+    // Only close sidebar if the search input isn't focused (avoids accidental dismissal)
+    if (document.activeElement !== searchInputRef.current) {
+      setSidebarOpen(false);
+    }
+  };
 
   if (loading) return (
     <div style={{ display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", minHeight:"100vh", gap:16, position:"relative", zIndex:1 }}>
@@ -183,11 +228,11 @@ function App() {
         <div className="sidebar-header">
           <div style={{ fontFamily:"Rajdhani", fontSize:20, fontWeight:700, color:"#e8f0f8", letterSpacing:"0.1em", lineHeight:1 }}>ECHO SET GUIDE</div>
           <div style={{ fontFamily:"Rajdhani", fontSize:10, color:"#3a5568", letterSpacing:"0.15em", marginTop:3 }}>WUTHERING WAVES</div>
-          <input className="sidebar-search" type="text" placeholder="Search sets…" value={setSearch} onChange={e=>setSetSearch(e.target.value)} />
+          <input ref={searchInputRef} className="sidebar-search" type="text" placeholder="Search sets…" value={setSearch} onChange={e=>setSetSearch(e.target.value)} />
         </div>
 
         <div className="element-filters">
-          {ELEMENTS.map(el => {
+          {elements.map(el => {
             const t = T[el] || null;
             const active = elemFilter === el;
             return (
@@ -204,7 +249,7 @@ function App() {
             <div style={{ padding:"20px 16px", color:"#3a5060", fontSize:12 }}>No sets match</div>
           )}
           {filteredSets.map(s => {
-            const t = T[s.element] || T.Universal;
+            const t = getTheme(T, s.element);
             const active = s.id === selectedId;
             return (
               <button key={s.id} ref={active ? activeRef : null}
@@ -252,7 +297,7 @@ function App() {
               <div style={{ color:"#5a7080", fontSize:14, padding:"40px 0", textAlign:"center", letterSpacing:"0.05em" }}>No characters match "{charSearch}"</div>
             ) : (
               <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(300px, 1fr))", gap:14 }}>
-                {filteredChars.map(char => <CharacterCard key={char.name} char={char} setTheme={theme} />)}
+                {filteredChars.map(char => <CharacterCard key={char.name} char={char} setTheme={theme} T={T} />)}
               </div>
             )}
           </>
