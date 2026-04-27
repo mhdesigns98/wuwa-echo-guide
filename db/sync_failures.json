@@ -1,8 +1,40 @@
 {
-  "total_failures": 1,
+  "total_failures": 7,
   "failures": [
     {
       "slug": "aemeath",
+      "reason": "no echo sets found (page format may have changed)",
+      "fields_empty": []
+    },
+    {
+      "slug": "cartethyia",
+      "reason": "incomplete data via html",
+      "fields_empty": [
+        "cost3"
+      ]
+    },
+    {
+      "slug": "denia",
+      "reason": "no echo sets found (page format may have changed)",
+      "fields_empty": []
+    },
+    {
+      "slug": "hiyuki",
+      "reason": "no echo sets found (page format may have changed)",
+      "fields_empty": []
+    },
+    {
+      "slug": "lucilla",
+      "reason": "no echo sets found (page format may have changed)",
+      "fields_empty": []
+    },
+    {
+      "slug": "rover-havoc",
+      "reason": "no echo sets found (page format may have changed)",
+      "fields_empty": []
+    },
+    {
+      "slug": "sigrika",
       "reason": "no echo sets found (page format may have changed)",
       "fields_empty": []
     }
