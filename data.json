@@ -3,14 +3,54 @@
     "version": "1.1",
     "note": "Element theme colors live here so you never need to touch index.html to add a new element.",
     "themes": {
-      "Electro":   { "color": "#c084fc", "glow": "#7c3aed", "dim": "rgba(124,58,237,0.12)",  "badge": "#1e0a38" },
-      "Aero":      { "color": "#4ade80", "glow": "#16a34a", "dim": "rgba(22,163,74,0.12)",   "badge": "#041a0c" },
-      "Spectro":   { "color": "#fcd34d", "glow": "#d97706", "dim": "rgba(217,119,6,0.12)",   "badge": "#2a1500" },
-      "Fusion":    { "color": "#fb923c", "glow": "#ea580c", "dim": "rgba(234,88,12,0.12)",   "badge": "#2a0e00" },
-      "Glacio":    { "color": "#67e8f9", "glow": "#0891b2", "dim": "rgba(8,145,178,0.12)",   "badge": "#031520" },
-      "Havoc":     { "color": "#f87171", "glow": "#dc2626", "dim": "rgba(220,38,38,0.12)",   "badge": "#200404" },
-      "Support":   { "color": "#6ee7b7", "glow": "#059669", "dim": "rgba(5,150,105,0.12)",   "badge": "#041a0e" },
-      "Universal": { "color": "#b0bfd0", "glow": "#475569", "dim": "rgba(71,85,105,0.12)",   "badge": "#0f1520" }
+      "Electro": {
+        "color": "#c084fc",
+        "glow": "#7c3aed",
+        "dim": "rgba(124,58,237,0.12)",
+        "badge": "#1e0a38"
+      },
+      "Aero": {
+        "color": "#4ade80",
+        "glow": "#16a34a",
+        "dim": "rgba(22,163,74,0.12)",
+        "badge": "#041a0c"
+      },
+      "Spectro": {
+        "color": "#fcd34d",
+        "glow": "#d97706",
+        "dim": "rgba(217,119,6,0.12)",
+        "badge": "#2a1500"
+      },
+      "Fusion": {
+        "color": "#fb923c",
+        "glow": "#ea580c",
+        "dim": "rgba(234,88,12,0.12)",
+        "badge": "#2a0e00"
+      },
+      "Glacio": {
+        "color": "#67e8f9",
+        "glow": "#0891b2",
+        "dim": "rgba(8,145,178,0.12)",
+        "badge": "#031520"
+      },
+      "Havoc": {
+        "color": "#f87171",
+        "glow": "#dc2626",
+        "dim": "rgba(220,38,38,0.12)",
+        "badge": "#200404"
+      },
+      "Support": {
+        "color": "#6ee7b7",
+        "glow": "#059669",
+        "dim": "rgba(5,150,105,0.12)",
+        "badge": "#041a0e"
+      },
+      "Universal": {
+        "color": "#b0bfd0",
+        "glow": "#475569",
+        "dim": "rgba(71,85,105,0.12)",
+        "badge": "#0f1520"
+      }
     }
   },
   "sets": [
@@ -22,18 +62,54 @@
       "mainEcho": "Reminiscence Fleurety",
       "characters": [
         {
-          "name": "Cardia",
+          "name": "Cartethyia",
           "element": "Aero",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%", "HP%"], "1": ["HP%"] },
-          "substats": ["Energy Regen (15%)", "Crit Rate/DMG", "HP%", "Basic ATK Bonus"]
+          "costs": {
+            "4": [
+              "Crit DMG"
+            ],
+            "3": [
+              "Aero"
+            ],
+            "1": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Liberation DMG",
+            "Basic DMG"
+          ],
+          "targetER": "160%+"
         },
         {
-          "name": "Arrow Rover",
+          "name": "Jiyan",
           "element": "Aero",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%", "HP%"], "1": ["HP%"] },
-          "substats": ["Energy Regen (15%)", "Crit Rate/DMG", "HP%", "Basic ATK Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit DMG",
+            "Crit Rate",
+            "Energy Recharge",
+            "ATK%",
+            "Heavy DMG"
+          ],
+          "targetER": "125%"
         }
       ]
     },
@@ -48,15 +124,24 @@
           "name": "Jiyan",
           "element": "Aero",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (25%)", "Crit Rate/DMG", "ATK%", "Heavy ATK Bonus"]
-        },
-        {
-          "name": "Aalto",
-          "element": "Aero",
-          "role": "Support / Sub-DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (25%)", "Crit Rate/DMG", "ATK%", "Heavy ATK Bonus"]
+          "costs": {
+            "4": [
+              "Crit DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero DMG%"
+            ],
+            "1": [
+              "ATK%"
+            ]
+          },
+          "substats": [
+            "Energy Regen (25%)",
+            "Crit Rate/DMG",
+            "ATK%",
+            "Heavy ATK Bonus"
+          ]
         }
       ]
     },
@@ -68,11 +153,27 @@
       "mainEcho": "Nightmare Kelpie",
       "characters": [
         {
-          "name": "Chicona",
+          "name": "Ciaccona",
           "element": "Aero",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (10%)", "Crit Rate/DMG", "ATK%"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%"
+          ],
+          "targetER": "130%"
         }
       ]
     },
@@ -84,34 +185,54 @@
       "mainEcho": "Lady of the Sea / False Sovereign",
       "characters": [
         {
-          "name": "Yuno",
-          "element": "Universal",
-          "role": "Main DPS (3pc)",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Elem DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (15-25%)", "Crit Rate/DMG", "Liberation/Heavy Bonus"]
-        },
-        {
           "name": "Augusta",
           "element": "Electro",
-          "role": "Main DPS (3pc)",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Elem DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (15-25%)", "Crit Rate/DMG", "Liberation/Heavy Bonus"]
-        }
-      ]
-    },
-    {
-      "id": "law-of-harmony",
-      "name": "Law of Harmony",
-      "element": "Aero",
-      "setBonus": "2pc: Aero DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "Venrio",
-      "characters": [
-        {
-          "name": "Choya",
-          "element": "Aero",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Aero DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (25%)", "Crit Rate/DMG", "ATK%", "Heavy ATK Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Electro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Heavy DMG"
+          ],
+          "targetER": "120%"
+        },
+        {
+          "name": "Iuno",
+          "element": "Universal",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit DMG",
+            "Crit Rate",
+            "Energy Recharge",
+            "Liberation DMG",
+            "ATK%"
+          ],
+          "targetER": "120%"
         }
       ]
     },
@@ -123,25 +244,29 @@
       "mainEcho": "Nightmare Thundering Mephis",
       "characters": [
         {
-          "name": "Xiangli Yao",
-          "element": "Electro",
-          "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Electro DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Liberation Bonus"]
-        },
-        {
           "name": "Calcharo",
           "element": "Electro",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Electro DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Liberation Bonus"]
-        },
-        {
-          "name": "Augusta",
-          "element": "Electro",
-          "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Electro DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Liberation Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Electro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Liberation DMG"
+          ],
+          "targetER": "120%"
         }
       ]
     },
@@ -156,8 +281,25 @@
           "name": "Galbrena",
           "element": "Fusion",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "ATK%", "Heavy ATK Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Fusion"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Heavy DMG"
+          ],
+          "targetER": "125%"
         }
       ]
     },
@@ -172,15 +314,26 @@
           "name": "Lupa",
           "element": "Fusion",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (25%)", "Crit Rate/DMG", "Liberation/Basic Bonus"]
-        },
-        {
-          "name": "Encore",
-          "element": "Fusion",
-          "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (25%)", "Crit Rate/DMG", "Liberation/Basic Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Fusion"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Liberation DMG"
+          ],
+          "targetER": "130%"
         }
       ]
     },
@@ -195,22 +348,26 @@
           "name": "Changli",
           "element": "Fusion",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Skill/Basic Bonus"]
-        },
-        {
-          "name": "Encore",
-          "element": "Fusion",
-          "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Skill/Basic Bonus"]
-        },
-        {
-          "name": "Brandt",
-          "element": "Fusion",
-          "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Fusion DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (15-20%)", "Crit Rate/DMG", "Skill/Basic Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Fusion"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "125%"
         }
       ]
     },
@@ -222,25 +379,29 @@
       "mainEcho": "Sentry Construct",
       "characters": [
         {
-          "name": "Carla",
+          "name": "Carlotta",
           "element": "Glacio",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Glacio DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
-        },
-        {
-          "name": "Zapos",
-          "element": "Glacio",
-          "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Glacio DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
-        },
-        {
-          "name": "Lingyang",
-          "element": "Glacio",
-          "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Glacio DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Glacio"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Skill DMG"
+          ],
+          "targetER": "120%"
         }
       ]
     },
@@ -255,8 +416,24 @@
           "name": "Phrolova",
           "element": "Havoc",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Havoc DMG%"], "1": ["ATK%"] },
-          "substats": ["No ER needed", "Crit Rate/DMG", "ATK%", "Resonance Skill Bonus"]
+          "costs": {
+            "4": [
+              "Crit DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc DMG%"
+            ],
+            "1": [
+              "ATK%"
+            ]
+          },
+          "substats": [
+            "No ER needed",
+            "Crit Rate/DMG",
+            "ATK%",
+            "Resonance Skill Bonus"
+          ]
         }
       ]
     },
@@ -268,25 +445,54 @@
       "mainEcho": "Laulyun / Nightmare Impermanence Heron",
       "characters": [
         {
-          "name": "Canella",
+          "name": "Camellya",
           "element": "Havoc",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Havoc DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (25-50%)", "Crit Rate/DMG", "Basic/Heavy ATK Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "115-125%"
         },
         {
-          "name": "Rocha",
-          "element": "Havoc",
-          "role": "Sub-DPS / Support",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Havoc DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (25-50%)", "Crit Rate/DMG", "Basic/Heavy ATK Bonus"]
-        },
-        {
-          "name": "Phrolova",
+          "name": "Roccia",
           "element": "Havoc",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Havoc DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (25-50%)", "Crit Rate/DMG", "Basic/Heavy ATK Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Heavy DMG"
+          ],
+          "targetER": "120%"
         }
       ]
     },
@@ -301,8 +507,25 @@
           "name": "Chisa",
           "element": "Havoc",
           "role": "Sustain / Support",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Havoc DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (25%+)", "Crit Rate/DMG", "Liberation Bonus"]
+          "costs": {
+            "4": [
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Liberation DMG"
+          ],
+          "targetER": "130-140%"
         }
       ]
     },
@@ -314,11 +537,29 @@
       "mainEcho": "Havia",
       "characters": [
         {
-          "name": "Len Kuro",
+          "name": "Lynae",
           "element": "Spectro",
-          "role": "Buffer Build",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Spectro DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "ATK%", "Basic ATK Bonus"]
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Spectro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit DMG",
+            "Crit Rate",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "120%"
         }
       ]
     },
@@ -330,11 +571,29 @@
       "mainEcho": "Havia",
       "characters": [
         {
-          "name": "Len Kuro",
+          "name": "Luuk Herssen",
           "element": "Spectro",
-          "role": "DPS Build",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Spectro DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "ATK%", "Basic ATK Bonus"]
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Spectro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "120%+"
         }
       ]
     },
@@ -346,25 +605,53 @@
       "mainEcho": "Capatanius",
       "characters": [
         {
-          "name": "Sunonni",
-          "element": "Spectro",
-          "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Spectro DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (10%)", "Crit Rate/DMG", "Heavy ATK Bonus"]
-        },
-        {
           "name": "Phoebe",
           "element": "Spectro",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Spectro DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (10%)", "Crit Rate/DMG", "Heavy ATK Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Spectro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Heavy DMG",
+            "Energy Recharge"
+          ],
+          "targetER": "115%"
         },
         {
-          "name": "Spectro Rover",
+          "name": "Zani",
           "element": "Spectro",
           "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Spectro DMG%"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (10%)", "Crit Rate/DMG", "Heavy ATK Bonus"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Spectro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%"
+          ],
+          "targetER": "115%"
         }
       ]
     },
@@ -379,22 +666,24 @@
           "name": "Zhezhi",
           "element": "Glacio",
           "role": "Sub-DPS / Buffer",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Elem DMG%", "Energy Regen"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
-        },
-        {
-          "name": "Yinlin",
-          "element": "Electro",
-          "role": "Main DPS / Sub-DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Elem DMG%", "Energy Regen"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
-        },
-        {
-          "name": "Canella",
-          "element": "Havoc",
-          "role": "Main DPS",
-          "costs": { "4": ["Crit DMG", "Crit Rate"], "3": ["Elem DMG%", "Energy Regen"], "1": ["ATK%"] },
-          "substats": ["Energy Regen (20%)", "Crit Rate/DMG", "Resonance Skill Bonus"]
+          "costs": {
+            "4": [
+              "Crit DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Elem DMG%",
+              "Energy Regen"
+            ],
+            "1": [
+              "ATK%"
+            ]
+          },
+          "substats": [
+            "Energy Regen (20%)",
+            "Crit Rate/DMG",
+            "Resonance Skill Bonus"
+          ]
         }
       ]
     },
@@ -406,25 +695,466 @@
       "mainEcho": "Fallacy of No Return / Bell-Borne Geochelone",
       "characters": [
         {
-          "name": "Verina",
-          "element": "Spectro",
+          "name": "Baizhi",
+          "element": "Glacio",
+          "role": "Healer",
+          "costs": {
+            "4": [
+              "Healing Bonus"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "HP%"
+          ],
+          "targetER": "160%+"
+        },
+        {
+          "name": "Cantarella",
+          "element": "Havoc",
           "role": "Healer / Buffer",
-          "costs": { "4": ["Healing Bonus%", "Crit DMG", "Crit Rate"], "3": ["Energy Regen"], "1": ["HP%", "ATK%"] },
-          "substats": ["Energy Regen (230% total)", "HP%", "ATK%"]
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "150%+"
         },
         {
           "name": "Shorekeeper",
           "element": "Spectro",
           "role": "Healer / Buffer",
-          "costs": { "4": ["Healing Bonus%", "Crit DMG", "Crit Rate"], "3": ["Energy Regen"], "1": ["HP%", "ATK%"] },
-          "substats": ["Energy Regen (230% total)", "HP%", "ATK%"]
+          "costs": {
+            "4": [
+              "Crit DMG"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Liberation DMG",
+            "HP%",
+            "Crit Rate"
+          ],
+          "targetER": "250%"
         },
         {
-          "name": "Baizhi",
+          "name": "Verina",
+          "element": "Spectro",
+          "role": "Healer / Buffer",
+          "costs": {
+            "4": [
+              "Healing Bonus"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "ATK%"
+          ],
+          "targetER": "220%+"
+        }
+      ]
+    },
+    {
+      "id": "celestial-light",
+      "name": "Celestial Light",
+      "element": "Spectro",
+      "setBonus": "2pc: Spectro DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD \u2014 fill in manually",
+      "characters": [
+        {
+          "name": "Jinhsi",
+          "element": "Spectro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Spectro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Skill DMG"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dream-of-the-lost-2pc-havoc",
+      "name": "Dream of the Lost + 2pc Havoc",
+      "element": "Universal",
+      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD \u2014 fill in manually",
+      "characters": [
+        {
+          "name": "Phrolova",
+          "element": "Havoc",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Skill DMG"
+          ],
+          "targetER": "0%"
+        }
+      ]
+    },
+    {
+      "id": "emperian-anthem",
+      "name": "Emperian Anthem",
+      "element": "Universal",
+      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD \u2014 fill in manually",
+      "characters": [
+        {
+          "name": "Zhezhi",
           "element": "Glacio",
-          "role": "Healer",
-          "costs": { "4": ["Healing Bonus%", "Crit DMG", "Crit Rate"], "3": ["Energy Regen"], "1": ["HP%", "ATK%"] },
-          "substats": ["Energy Regen (230% total)", "HP%", "ATK%"]
+          "role": "Sub-DPS / Buffer",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Glacio"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "Basic DMG",
+            "ATK%"
+          ],
+          "targetER": "140%"
+        }
+      ]
+    },
+    {
+      "id": "halo-of-starry-radiance",
+      "name": "Halo of Starry Radiance",
+      "element": "Universal",
+      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD \u2014 fill in manually",
+      "characters": [
+        {
+          "name": "Mornye",
+          "element": "Universal",
+          "role": "Support / DEF",
+          "costs": {
+            "4": [
+              "Defence"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "DEF%"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "DEF%",
+            "Crit Rate",
+            "Liberation DMG"
+          ],
+          "targetER": "240%"
+        }
+      ]
+    },
+    {
+      "id": "law-of-harmony-2pc-aero",
+      "name": "Law of Harmony + 2pc Aero",
+      "element": "Universal",
+      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD \u2014 fill in manually",
+      "characters": [
+        {
+          "name": "Qiuyuan",
+          "element": "Aero",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Heavy DMG"
+          ],
+          "targetER": "130%"
+        }
+      ]
+    },
+    {
+      "id": "moonlit-clouds",
+      "name": "Moonlit Clouds",
+      "element": "Support",
+      "setBonus": "2pc: Support DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD \u2014 fill in manually",
+      "characters": [
+        {
+          "name": "Buling",
+          "element": "Electro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Electro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%"
+          ],
+          "targetER": "140%"
+        },
+        {
+          "name": "Danjin",
+          "element": "Havoc",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Heavy DMG"
+          ]
+        },
+        {
+          "name": "Jianxin",
+          "element": "Aero",
+          "role": "Support / Sub-DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Liberation DMG"
+          ],
+          "targetER": "120%"
+        },
+        {
+          "name": "Lumi",
+          "element": "Electro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Electro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit DMG",
+            "Crit Rate",
+            "Energy Recharge",
+            "ATK%"
+          ],
+          "targetER": "140%"
+        }
+      ]
+    },
+    {
+      "id": "sound-of-true-name",
+      "name": "Sound of True Name",
+      "element": "Aero",
+      "setBonus": "2pc: Aero DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD \u2014 fill in manually",
+      "characters": [
+        {
+          "name": "Sigrika",
+          "element": "Aero",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "ATK"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%"
+          ],
+          "targetER": "125-150%"
+        }
+      ]
+    },
+    {
+      "id": "tidebreaking-courage",
+      "name": "Tidebreaking Courage",
+      "element": "Fusion",
+      "setBonus": "2pc: Fusion DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD \u2014 fill in manually",
+      "characters": [
+        {
+          "name": "Brant",
+          "element": "Fusion",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "125%"
+        }
+      ]
+    },
+    {
+      "id": "trailblazing-star",
+      "name": "Trailblazing Star",
+      "element": "Fusion",
+      "setBonus": "2pc: Fusion DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD \u2014 fill in manually",
+      "characters": [
+        {
+          "name": "Aemeath",
+          "element": "Fusion",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "Crit DMG"
+            ],
+            "3": [
+              "Fusion"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "120-130%"
         }
       ]
     }
