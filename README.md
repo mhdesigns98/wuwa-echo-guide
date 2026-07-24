@@ -16,31 +16,34 @@ For each echo set you get:
 
 | # | Set | Element |
 |---|-----|---------|
-| 1 | Freezing Frost | Glacio |
-| 2 | Molten Rift | Fusion |
-| 3 | Void Thunder | Electro |
-| 4 | Sierra Gale | Aero |
-| 5 | Celestial Light | Spectro |
-| 6 | Sun-sinking Eclipse | Havoc |
-| 7 | Rejuvenating Glow | Support |
-| 8 | Moonlit Clouds | Support |
-| 9 | Lingering Tunes | Universal |
-| 10 | Midnight Veil | Havoc |
-| 11 | Empyrean Anthem | Universal |
-| 12 | Eternal Radiance | Spectro |
-| 13 | Frosty Resolve | Glacio |
-| 14 | Tidebreaking Courage | Universal |
-| 15 | Gusts of Welkin | Aero |
-| 16 | Windward Pilgrimage | Aero |
-| 17 | Flaming Clawprint | Fusion |
-| 18 | Crown of Valor | Universal |
-| 19 | Dream of the Lost | Havoc |
-| 20 | Flamewing's Shadow | Fusion |
-| 21 | Law of Harmony | Aero |
-| 22 | Thread of Severed Fate | Havoc |
-| 23 | Halo of Starry Radiance | Support |
-| 24 | Pact of Neonlight Leap | Spectro |
-| 25 | Rite of Gilded Revelation | Spectro |
+| 1 | Void Thunder | Electro |
+| 2 | Gusts of Welkin | Aero |
+| 3 | Sierra Gale | Aero |
+| 4 | Sound of True Name | Aero |
+| 5 | Windward Pilgrimage | Aero |
+| 6 | Celestial Light | Spectro |
+| 7 | Eternal Radiance | Spectro |
+| 8 | Pact of Neonlight Leap | Spectro |
+| 9 | Rite of Gilded Revelation | Spectro |
+| 10 | Flamewing's Shadow | Fusion |
+| 11 | Flaming Clawprint | Fusion |
+| 12 | Molten Rift | Fusion |
+| 13 | Tidebreaking Courage | Fusion |
+| 14 | Trailblazing Star | Fusion |
+| 15 | Frosty Resolve | Glacio |
+| 16 | Dream of the Lost | Havoc |
+| 17 | Midnight Veil | Havoc |
+| 18 | Thread of Severed Fate | Havoc |
+| 19 | Moonlit Clouds | Support |
+| 20 | Rejuvenating Glow | Support |
+| 21 | Crown of Valor | Universal |
+| 22 | Dream of the Lost + 2pc Havoc | Universal |
+| 23 | Emperian Anthem | Universal |
+| 24 | Empyrean Anthem | Universal |
+| 25 | Halo of Starry Radiance | Support |
+| 26 | Law of Harmony + 2pc Aero | Universal |
+
+*(Kept in sync with `data.json` — verify against it if this list looks stale.)*
 
 ## How to Use
 
@@ -52,48 +55,61 @@ Just open the site and click any set tab. No account, no login, no install.
 
 All character and set data lives in **`data.json`**. The app fetches it at runtime, so you never need to touch `index.html` to update builds.
 
-## Database Pipeline (Prydwen Source)
+The Prydwen scraper pipeline is retired — Prydwen now returns `410 Gone` on
+`page-data.json` and Cloudflare blocks direct page scraping. The pipeline has been
+archived to `archive/prydwen/` (see that folder's `README.md` for details).
 
-If you want to build this out as a real database (instead of only a front-end JSON file), there is now a starter pipeline:
+**Scheduled run:** a launchd agent (`com.mhayes.wuwa-refresh`, plist kept at
+`scripts/com.mhayes.wuwa-refresh.plist` and installed to `~/Library/LaunchAgents/`)
+runs `refresh.py --apply` every **Monday at 9:12am**, appending each dated report to
+`logs/refresh-cron.log`. Check that log for new sets/characters to add to the sheet.
+Manage it with `launchctl kickstart|bootout gui/$UID/com.mhayes.wuwa-refresh`.
+Note: this only updates the local `data.json` — publishing to GitHub Pages/Vercel
+is still a manual step.
 
-- `db/schema.sql` - normalized SQLite schema for echo sets, characters, and character/set build links.
-- `scripts/sync_prydwen_builds.py` - pulls character pages from Prydwen and extracts:
-  - best echo sets
-  - recommended 4/3/1-cost stats
-  - recommended substats
-- `scripts/build_sqlite.py` - loads the synced JSON into SQLite.
-- `scripts/export_app_data.py` - converts synced data into the current app `data.json` structure.
+Refreshing the guide is now a **two-command workflow**, run in order:
 
-### Run it
+### 1. `python3 scripts/refresh.py` — game data (set bonuses, roster)
 
-From `wuwa-echo-guide`:
+Pulls sonata set bonuses and detects new sets/characters from
+[static.nanoka.cc](https://static.nanoka.cc) (a hakush.in revival, primary source),
+falling back to [api.encore.moe](https://api.encore.moe) if nanoka is unreachable.
 
-```bash
-python3 scripts/sync_prydwen_builds.py
-python3 scripts/build_sqlite.py
-python3 scripts/export_app_data.py
-```
-
-This writes:
-
-- `db/prydwen_character_builds.json`
-- `db/wuwa_echoes.sqlite`
-- `data.prydwen.json`
-
-### Quick test run
-
-To test on only a few characters first:
+By default it runs in **report-only mode**: it prints a diff of proposed `setBonus`
+changes, plus warnings for new sets, new characters, and missing `mainEcho` values.
+Nothing is written to disk unless you pass `--apply`.
 
 ```bash
-python3 scripts/sync_prydwen_builds.py --limit 5
-python3 scripts/build_sqlite.py
+python3 scripts/refresh.py              # dry run: print the diff/report only
+python3 scripts/refresh.py --apply      # write approved changes to data.json
+python3 scripts/refresh.py --offline    # use cached data, skip network calls
+python3 scripts/refresh.py --force-fetch  # ignore cache, re-fetch everything
+python3 scripts/refresh.py --source encore  # force the encore.moe fallback
 ```
 
-### Notes
+Exit codes: `0` clean (no findings), `1` findings pending review, `2` error.
 
-- The extractor is intentionally conservative and targets the core data you asked for (echo sets, best-with characters, and substats).
-- Prydwen page structure can change over time, so validate a few records after each patch cycle.
-- Respect Prydwen's terms of use when pulling data.
+Fetched data is cached under `cache/{version}/`. The cache is disposable — delete it
+any time to force a clean re-fetch.
+
+### 2. `python3 scripts/import_sheet.py` — character build recommendations
+
+Merges the curated Google Sheet (the authoritative source for character build
+recommendations — main stats, substats, roles) into `data.json`. Supports
+`--dry-run` to preview changes before writing.
+
+```bash
+python3 scripts/import_sheet.py --dry-run
+python3 scripts/import_sheet.py
+```
+
+### Why this order
+
+Run `refresh.py` first so any new sonata sets exist in `data.json` before
+`import_sheet.py` tries to attach characters to them. **A new set only shows up in
+the app once a character in the sheet is assigned to use it** — `refresh.py` alone
+will report a new set's existence, but won't make it visible in the UI until
+`import_sheet.py` links a character to it.
 
 ### Adding or editing a character
 
@@ -150,4 +166,6 @@ The site updates within ~30 seconds. No build step, no terminal needed.
 
 ## Data Source
 
-Build recommendations sourced from [Prydwen.gg](https://www.prydwen.gg/wuthering-waves). Always verify against the latest guides as the meta shifts with new patches.
+- **Game data** (echo sets, set bonuses, character roster): [static.nanoka.cc](https://static.nanoka.cc) (hakush.in revival), with [api.encore.moe](https://api.encore.moe) as fallback, via `scripts/refresh.py`.
+- **Build recommendations** (main stats, substats, roles): curated in the Google Sheet and merged via `scripts/import_sheet.py`. Always verify against the latest guides as the meta shifts with new patches.
+- **Prydwen.gg** — *historical.* The original data source; its scraper pipeline is archived in `archive/prydwen/` and is no longer run (endpoint returns `410`, scraping is Cloudflare-blocked).

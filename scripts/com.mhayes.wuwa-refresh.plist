@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.mhayes.wuwa-refresh</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>-c</string>
+    <string>cd "$HOME/Projects/personal/wuwa-echo-guide" &amp;&amp; { date; /opt/homebrew/bin/python3 scripts/refresh.py --apply; } >> logs/refresh-cron.log 2>&amp;1</string>
+  </array>
+
+  <!-- Mondays at 9:12am local; launchd runs missed jobs after wake -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key>
+    <integer>1</integer>
+    <key>Hour</key>
+    <integer>9</integer>
+    <key>Minute</key>
+    <integer>12</integer>
+  </dict>
+
+  <key>StandardErrorPath</key>
+  <string>/tmp/com.mhayes.wuwa-refresh.err</string>
+</dict>
+</plist>

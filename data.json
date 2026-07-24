@@ -55,10 +55,141 @@
   },
   "sets": [
     {
+      "id": "void-thunder",
+      "name": "Void Thunder",
+      "element": "Electro",
+      "setBonus": "2pc: Electro DMG + 10%. | 5pc: Electro DMG + 15% after releasing Heavy Attack or Resonance Skill. This effect stacks up to 2 times, each stack lasts 15s.",
+      "mainEcho": "Nightmare Thundering Mephis",
+      "characters": [
+        {
+          "name": "Calcharo",
+          "element": "Electro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Electro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Liberation DMG"
+          ],
+          "targetER": "120%"
+        }
+      ]
+    },
+    {
+      "id": "gust-of-welken",
+      "name": "Gusts of Welkin",
+      "element": "Aero",
+      "setBonus": "2pc: Aero DMG + 10% | 5pc: Inflicting Aero Erosion upon enemies increases Aero DMG for all Resonators in the team by 15%, and for the Resonator triggering this effect by an additional 15%, lasting for 20s.",
+      "mainEcho": "Nightmare Kelpie",
+      "characters": [
+        {
+          "name": "Ciaccona",
+          "element": "Aero",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sierra-gale",
+      "name": "Sierra Gale",
+      "element": "Aero",
+      "setBonus": "2pc: Aero DMG + 10%. | 5pc: Aero DMG + 30% for 15s after releasing Intro Skill.",
+      "mainEcho": "Nightmare Jue",
+      "characters": [
+        {
+          "name": "Jiyan",
+          "element": "Aero",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "Crit DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero DMG%"
+            ],
+            "1": [
+              "ATK%"
+            ]
+          },
+          "substats": [
+            "Energy Regen (25%)",
+            "Crit Rate/DMG",
+            "ATK%",
+            "Heavy ATK Bonus"
+          ],
+          "targetER": "125%"
+        }
+      ]
+    },
+    {
+      "id": "sound-of-true-name",
+      "name": "Sound of True Name",
+      "element": "Aero",
+      "setBonus": "2pc: Aero DMG + 10% | 5pc: Dealing Echo Skill DMG to enemies increases the Resonator's Echo Skill Crit. Rate by 20%, and grants 15% Aero DMG Bonus for 5s.",
+      "mainEcho": "TBD — fill in manually",
+      "characters": [
+        {
+          "name": "Sigrika",
+          "element": "Aero",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "ATK"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%"
+          ],
+          "targetER": "125-150%"
+        }
+      ]
+    },
+    {
       "id": "winward-pilgrimage",
       "name": "Windward Pilgrimage",
       "element": "Aero",
-      "setBonus": "2pc: Aero DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "setBonus": "2pc: Aero DMG + 10% | 5pc: Hitting a target with Aero Erosion increases Crit. Rate by 10% and grants 30% Aero DMG Bonus, lasting for 10s.",
       "mainEcho": "Reminiscence Fleurety",
       "characters": [
         {
@@ -114,47 +245,48 @@
       ]
     },
     {
-      "id": "sierra-gale",
-      "name": "Sierra Gale",
-      "element": "Aero",
-      "setBonus": "2pc: Aero DMG +10% | 5pc: Aero DMG +15% after Resonance Skill / Liberation hits",
-      "mainEcho": "Nightmare Jue",
+      "id": "celestial-light",
+      "name": "Celestial Light",
+      "element": "Spectro",
+      "setBonus": "2pc: Spectro DMG + 10%. | 5pc: Spectro DMG + 30% for 15s after releasing Intro Skill.",
+      "mainEcho": "TBD — fill in manually",
       "characters": [
         {
-          "name": "Jiyan",
-          "element": "Aero",
+          "name": "Jinhsi",
+          "element": "Spectro",
           "role": "Main DPS",
           "costs": {
             "4": [
-              "Crit DMG",
+              "DMG",
               "Crit Rate"
             ],
             "3": [
-              "Aero DMG%"
+              "Spectro"
             ],
             "1": [
-              "ATK%"
+              "ATK %"
             ]
           },
           "substats": [
-            "Energy Regen (25%)",
-            "Crit Rate/DMG",
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
             "ATK%",
-            "Heavy ATK Bonus"
+            "Skill DMG"
           ]
         }
       ]
     },
     {
-      "id": "gust-of-welken",
-      "name": "Gusts of Welkin",
-      "element": "Aero",
-      "setBonus": "2pc: Aero DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "Nightmare Kelpie",
+      "id": "eternal-radiance",
+      "name": "Eternal Radiance",
+      "element": "Spectro",
+      "setBonus": "2pc: Spectro DMG + 10% | 5pc: Inflicting Spectro Frazzle on enemies increases Crit. Rate by 20% for 15s. Attacking enemies inflicted with 10 stacks of Spectro Frazzle grants 15% Spectro DMG Bonus for 15s.",
+      "mainEcho": "Capatanius",
       "characters": [
         {
-          "name": "Ciaccona",
-          "element": "Aero",
+          "name": "Phoebe",
+          "element": "Spectro",
           "role": "Main DPS",
           "costs": {
             "4": [
@@ -162,7 +294,7 @@
               "Crit Rate"
             ],
             "3": [
-              "Aero"
+              "Spectro"
             ],
             "1": [
               "ATK %"
@@ -171,47 +303,15 @@
           "substats": [
             "Crit Rate",
             "Crit DMG",
-            "ATK%"
-          ],
-          "targetER": "130%"
-        }
-      ]
-    },
-    {
-      "id": "crown-of-valor",
-      "name": "Crown of Valor",
-      "element": "Universal",
-      "setBonus": "See Prydwen.gg for set bonus details",
-      "mainEcho": "Lady of the Sea / False Sovereign",
-      "characters": [
-        {
-          "name": "Augusta",
-          "element": "Electro",
-          "role": "Main DPS",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Electro"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Crit Rate",
-            "Crit DMG",
-            "Energy Recharge",
             "ATK%",
-            "Heavy DMG"
+            "Heavy DMG",
+            "Energy Recharge"
           ],
-          "targetER": "120%"
+          "targetER": "115%"
         },
         {
-          "name": "Iuno",
-          "element": "Universal",
+          "name": "Zani",
+          "element": "Spectro",
           "role": "Main DPS",
           "costs": {
             "4": [
@@ -219,7 +319,40 @@
               "Crit Rate"
             ],
             "3": [
-              "Aero"
+              "Spectro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%"
+          ],
+          "targetER": "115%"
+        }
+      ]
+    },
+    {
+      "id": "pact-of-neon-light",
+      "name": "Pact of Neonlight Leap",
+      "element": "Spectro",
+      "setBonus": "2pc: Spectro DMG + 10% | 5pc: Casting Outro Skill increases the ATK of the incoming Resonator who casts Intro Skill by 15%. Each point of Tune Break Boost the incoming Resonator has additionally increases their ATK by 0.3%, up to 15%. This effect lasts for 15s, or until the Resonator is switched out.",
+      "mainEcho": "Havia",
+      "characters": [
+        {
+          "name": "Lynae",
+          "element": "Spectro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Spectro"
             ],
             "1": [
               "ATK %"
@@ -229,23 +362,23 @@
             "Crit DMG",
             "Crit Rate",
             "Energy Recharge",
-            "Liberation DMG",
-            "ATK%"
+            "ATK%",
+            "Basic DMG"
           ],
           "targetER": "120%"
         }
       ]
     },
     {
-      "id": "void-thunder",
-      "name": "Void Thunder",
-      "element": "Electro",
-      "setBonus": "2pc: Electro DMG +10% | 5pc: Electro DMG +15% after Resonance Skill / Liberation hits",
-      "mainEcho": "Nightmare Thundering Mephis",
+      "id": "ride-of-gilded-rev",
+      "name": "Rite of Gilded Revelation",
+      "element": "Spectro",
+      "setBonus": "2pc: Spectro DMG + 10% | 5pc: Dealing Basic Attack DMG increases Spectro DMG by 10% for 5s, stacking up to 3 times. With 3 stacks, casting Resonance Liberation grants 40% Basic Attack DMG Bonus.",
+      "mainEcho": "Havia",
       "characters": [
         {
-          "name": "Calcharo",
-          "element": "Electro",
+          "name": "Luuk Herssen",
+          "element": "Spectro",
           "role": "Main DPS",
           "costs": {
             "4": [
@@ -253,20 +386,20 @@
               "Crit Rate"
             ],
             "3": [
-              "Electro"
+              "Spectro"
             ],
             "1": [
               "ATK %"
             ]
           },
           "substats": [
-            "Energy Recharge",
-            "Crit DMG",
             "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
             "ATK%",
-            "Liberation DMG"
+            "Basic DMG"
           ],
-          "targetER": "120%"
+          "targetER": "120%+"
         }
       ]
     },
@@ -274,7 +407,7 @@
       "id": "flamewing-shadow",
       "name": "Flamewing's Shadow",
       "element": "Fusion",
-      "setBonus": "2pc: Fusion DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "setBonus": "3pc: Dealing Echo Skill DMG increases Heavy Attack Crit. Rate by 20% for 6s. Dealing Heavy Attack DMG increases Echo Skill Crit. Rate by 20% for 6s. While both effects are active, gain 16% Fusion DMG Bonus.",
       "mainEcho": "Chorosaurus",
       "characters": [
         {
@@ -307,7 +440,7 @@
       "id": "flaming-claw-print",
       "name": "Flaming Clawprint",
       "element": "Fusion",
-      "setBonus": "2pc: Fusion DMG +10% | 5pc: Basic ATK DMG +30% and Resonance Liberation DMG +30%",
+      "setBonus": "2pc: Fusion DMG + 10% | 5pc: Casting Resonance Liberation grants all Resonators in the team 15% Fusion DMG Bonus and the caster 20% Resonance Liberation DMG Bonus, lasting for 35s.",
       "mainEcho": "Lioness of Glory",
       "characters": [
         {
@@ -341,7 +474,7 @@
       "id": "molten-rift",
       "name": "Molten Rift",
       "element": "Fusion",
-      "setBonus": "2pc: Fusion DMG +10% | 5pc: Fusion DMG +15% after Resonance Skill hits",
+      "setBonus": "2pc: Fusion DMG + 10%. | 5pc: Fusion DMG + 30% for 15s after releasing Resonance Skill.",
       "mainEcho": "Nightmare Inferno Rider",
       "characters": [
         {
@@ -372,10 +505,77 @@
       ]
     },
     {
+      "id": "tidebreaking-courage",
+      "name": "Tidebreaking Courage",
+      "element": "Fusion",
+      "setBonus": "2pc: Energy Regen + 10% | 5pc: Increase the Resonator's ATK by 15%. Reaching 250% Energy Regen increases all Attribute DMG by 30% for the Resonator.",
+      "mainEcho": "TBD — fill in manually",
+      "characters": [
+        {
+          "name": "Brant",
+          "element": "Fusion",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "250%"
+        }
+      ]
+    },
+    {
+      "id": "trailblazing-star",
+      "name": "Trailblazing Star",
+      "element": "Fusion",
+      "setBonus": "2pc: Fusion DMG + 10% | 5pc: Inflicting Fusion Burst or Tune Rupture - Shifting increases the Resonator's Crit. Rate by 20% and grants 20% Fusion DMG Bonus for 8s.",
+      "mainEcho": "TBD — fill in manually",
+      "characters": [
+        {
+          "name": "Aemeath",
+          "element": "Fusion",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "Crit DMG"
+            ],
+            "3": [
+              "Fusion"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "120-130%"
+        }
+      ]
+    },
+    {
       "id": "frosty-resolve",
       "name": "Frosty Resolve",
       "element": "Glacio",
-      "setBonus": "2pc: Glacio DMG +10% | 5pc: Resonance Skill DMG +80% after using Resonance Skill",
+      "setBonus": "2pc: Resonance Skill DMG + 12% | 5pc: Casting Resonance Skill grants 22.5% Glacio DMG Bonus for 15s and casting Resonance Liberation increases Resonance Skill DMG by 18%, lasting for 5s. This effect stacks up to 2 times.",
       "mainEcho": "Sentry Construct",
       "characters": [
         {
@@ -409,7 +609,7 @@
       "id": "dream-of-the-lost",
       "name": "Dream of the Lost",
       "element": "Havoc",
-      "setBonus": "2pc: Havoc DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "setBonus": "3pc: Holding 0 Resonance Energy increases Crit. Rate by 20% and grants 35% Echo Skill DMG Bonus.",
       "mainEcho": "Nightmare Hecate",
       "characters": [
         {
@@ -441,7 +641,7 @@
       "id": "midnight-veil",
       "name": "Midnight Veil",
       "element": "Havoc",
-      "setBonus": "2pc: Havoc DMG +10% | 5pc: Heavy ATK DMG +30% and Intro Skill DMG +30%",
+      "setBonus": "2pc: Havoc DMG + 10% | 5pc: When Outro Skill is triggered, deal additional 480% Havoc DMG to surrounding enemies, considered Outro Skill DMG, and grant the incoming Resonator 15% Havoc DMG Bonus for 15s.",
       "mainEcho": "Laulyun / Nightmare Impermanence Heron",
       "characters": [
         {
@@ -500,7 +700,7 @@
       "id": "spread-of-sever-fate",
       "name": "Thread of Severed Fate",
       "element": "Havoc",
-      "setBonus": "2pc: Energy Regen +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "setBonus": "3pc: Inflicting Havoc Bane increases the Resonator's ATK by 20% and grants 30% Resonance Liberation DMG Bonus for 5s.",
       "mainEcho": "Nodding Leviathan",
       "characters": [
         {
@@ -530,435 +730,11 @@
       ]
     },
     {
-      "id": "pact-of-neon-light",
-      "name": "Pact of Neonlight Leap",
-      "element": "Spectro",
-      "setBonus": "2pc: Spectro DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "Havia",
-      "characters": [
-        {
-          "name": "Lynae",
-          "element": "Spectro",
-          "role": "Main DPS",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Spectro"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Crit DMG",
-            "Crit Rate",
-            "Energy Recharge",
-            "ATK%",
-            "Basic DMG"
-          ],
-          "targetER": "120%"
-        }
-      ]
-    },
-    {
-      "id": "ride-of-gilded-rev",
-      "name": "Rite of Gilded Revelation",
-      "element": "Spectro",
-      "setBonus": "2pc: Spectro DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "Havia",
-      "characters": [
-        {
-          "name": "Luuk Herssen",
-          "element": "Spectro",
-          "role": "Main DPS",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Spectro"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Crit Rate",
-            "Crit DMG",
-            "Energy Recharge",
-            "ATK%",
-            "Basic DMG"
-          ],
-          "targetER": "120%+"
-        }
-      ]
-    },
-    {
-      "id": "eternal-radiance",
-      "name": "Eternal Radiance",
-      "element": "Spectro",
-      "setBonus": "2pc: Spectro DMG +10% | 5pc: Crit Rate +10% on Spectro DMG hits",
-      "mainEcho": "Capatanius",
-      "characters": [
-        {
-          "name": "Phoebe",
-          "element": "Spectro",
-          "role": "Main DPS",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Spectro"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Crit Rate",
-            "Crit DMG",
-            "ATK%",
-            "Heavy DMG",
-            "Energy Recharge"
-          ],
-          "targetER": "115%"
-        },
-        {
-          "name": "Zani",
-          "element": "Spectro",
-          "role": "Main DPS",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Spectro"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Energy Recharge",
-            "Crit Rate",
-            "Crit DMG",
-            "ATK%"
-          ],
-          "targetER": "115%"
-        }
-      ]
-    },
-    {
-      "id": "empyrean-anthem",
-      "name": "Empyrean Anthem",
-      "element": "Universal",
-      "setBonus": "2pc: Energy Regen +10% | 5pc: Resonance Skill Crit DMG +80% (works across elements)",
-      "mainEcho": "Nightmare Tempest Mephis",
-      "characters": [
-        {
-          "name": "Zhezhi",
-          "element": "Glacio",
-          "role": "Sub-DPS / Buffer",
-          "costs": {
-            "4": [
-              "Crit DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Elem DMG%",
-              "Energy Regen"
-            ],
-            "1": [
-              "ATK%"
-            ]
-          },
-          "substats": [
-            "Energy Regen (20%)",
-            "Crit Rate/DMG",
-            "Resonance Skill Bonus"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "rejuvenating-glow",
-      "name": "Rejuvenating Glow",
-      "element": "Support",
-      "setBonus": "2pc: Healing Bonus +10% | 5pc: Healing buffs all team members' ATK by 15%",
-      "mainEcho": "Fallacy of No Return / Bell-Borne Geochelone",
-      "characters": [
-        {
-          "name": "Baizhi",
-          "element": "Glacio",
-          "role": "Healer",
-          "costs": {
-            "4": [
-              "Healing Bonus"
-            ],
-            "3": [
-              "Energy Recharge"
-            ],
-            "1": [
-              "HP%"
-            ]
-          },
-          "substats": [
-            "Energy Recharge",
-            "HP%"
-          ],
-          "targetER": "160%+"
-        },
-        {
-          "name": "Cantarella",
-          "element": "Havoc",
-          "role": "Healer / Buffer",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Havoc"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Crit Rate",
-            "Crit DMG",
-            "Energy Recharge",
-            "ATK%",
-            "Basic DMG"
-          ],
-          "targetER": "150%+"
-        },
-        {
-          "name": "Shorekeeper",
-          "element": "Spectro",
-          "role": "Healer / Buffer",
-          "costs": {
-            "4": [
-              "Crit DMG"
-            ],
-            "3": [
-              "Energy Recharge"
-            ],
-            "1": [
-              "HP%"
-            ]
-          },
-          "substats": [
-            "Energy Recharge",
-            "Crit DMG",
-            "Liberation DMG",
-            "HP%",
-            "Crit Rate"
-          ],
-          "targetER": "250%"
-        },
-        {
-          "name": "Verina",
-          "element": "Spectro",
-          "role": "Healer / Buffer",
-          "costs": {
-            "4": [
-              "Healing Bonus"
-            ],
-            "3": [
-              "Energy Recharge"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Energy Recharge",
-            "ATK%"
-          ],
-          "targetER": "220%+"
-        }
-      ]
-    },
-    {
-      "id": "celestial-light",
-      "name": "Celestial Light",
-      "element": "Spectro",
-      "setBonus": "2pc: Spectro DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD \u2014 fill in manually",
-      "characters": [
-        {
-          "name": "Jinhsi",
-          "element": "Spectro",
-          "role": "Main DPS",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Spectro"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Crit Rate",
-            "Crit DMG",
-            "Energy Recharge",
-            "ATK%",
-            "Skill DMG"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "dream-of-the-lost-2pc-havoc",
-      "name": "Dream of the Lost + 2pc Havoc",
-      "element": "Universal",
-      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD \u2014 fill in manually",
-      "characters": [
-        {
-          "name": "Phrolova",
-          "element": "Havoc",
-          "role": "Main DPS",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Havoc"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Crit Rate",
-            "Crit DMG",
-            "ATK%",
-            "Skill DMG"
-          ],
-          "targetER": "0%"
-        }
-      ]
-    },
-    {
-      "id": "emperian-anthem",
-      "name": "Emperian Anthem",
-      "element": "Universal",
-      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD \u2014 fill in manually",
-      "characters": [
-        {
-          "name": "Zhezhi",
-          "element": "Glacio",
-          "role": "Sub-DPS / Buffer",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Glacio"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Energy Recharge",
-            "Crit DMG",
-            "Crit Rate",
-            "Basic DMG",
-            "ATK%"
-          ],
-          "targetER": "140%"
-        }
-      ]
-    },
-    {
-      "id": "halo-of-starry-radiance",
-      "name": "Halo of Starry Radiance",
-      "element": "Universal",
-      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD \u2014 fill in manually",
-      "characters": [
-        {
-          "name": "Mornye",
-          "element": "Universal",
-          "role": "Support / DEF",
-          "costs": {
-            "4": [
-              "Defence"
-            ],
-            "3": [
-              "Energy Recharge"
-            ],
-            "1": [
-              "DEF%"
-            ]
-          },
-          "substats": [
-            "Energy Recharge",
-            "Crit DMG",
-            "DEF%",
-            "Crit Rate",
-            "Liberation DMG"
-          ],
-          "targetER": "240%"
-        }
-      ]
-    },
-    {
-      "id": "law-of-harmony-2pc-aero",
-      "name": "Law of Harmony + 2pc Aero",
-      "element": "Universal",
-      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD \u2014 fill in manually",
-      "characters": [
-        {
-          "name": "Qiuyuan",
-          "element": "Aero",
-          "role": "Main DPS",
-          "costs": {
-            "4": [
-              "Crit Rate"
-            ],
-            "3": [
-              "Aero"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Crit Rate",
-            "Crit DMG",
-            "Energy Recharge",
-            "ATK%",
-            "Heavy DMG"
-          ],
-          "targetER": "130%"
-        }
-      ]
-    },
-    {
       "id": "moonlit-clouds",
       "name": "Moonlit Clouds",
       "element": "Support",
-      "setBonus": "2pc: Support DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD \u2014 fill in manually",
+      "setBonus": "2pc: Energy Regen + 10%. | 5pc: Upon using Outro Skill, increases the ATK of the next Resonator by 22.5% for 15s.",
+      "mainEcho": "TBD — fill in manually",
       "characters": [
         {
           "name": "Buling",
@@ -1059,23 +835,44 @@
       ]
     },
     {
-      "id": "sound-of-true-name",
-      "name": "Sound of True Name",
-      "element": "Aero",
-      "setBonus": "2pc: Aero DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD \u2014 fill in manually",
+      "id": "rejuvenating-glow",
+      "name": "Rejuvenating Glow",
+      "element": "Support",
+      "setBonus": "2pc: Healing Bonus + 10%. | 5pc: Increases the ATK of all party members by 15% for 30s upon healing allies.",
+      "mainEcho": "Fallacy of No Return / Bell-Borne Geochelone",
       "characters": [
         {
-          "name": "Sigrika",
-          "element": "Aero",
-          "role": "Main DPS",
+          "name": "Baizhi",
+          "element": "Glacio",
+          "role": "Healer",
+          "costs": {
+            "4": [
+              "Healing Bonus"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "HP%"
+          ],
+          "targetER": "160%+"
+        },
+        {
+          "name": "Cantarella",
+          "element": "Havoc",
+          "role": "Healer / Buffer",
           "costs": {
             "4": [
               "DMG",
               "Crit Rate"
             ],
             "3": [
-              "ATK"
+              "Havoc"
             ],
             "1": [
               "ATK %"
@@ -1085,27 +882,42 @@
             "Crit Rate",
             "Crit DMG",
             "Energy Recharge",
-            "ATK%"
+            "ATK%",
+            "Basic DMG"
           ],
-          "targetER": "125-150%"
-        }
-      ]
-    },
-    {
-      "id": "tidebreaking-courage",
-      "name": "Tidebreaking Courage",
-      "element": "Fusion",
-      "setBonus": "2pc: Fusion DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD \u2014 fill in manually",
-      "characters": [
+          "targetER": "150%+"
+        },
         {
-          "name": "Brant",
-          "element": "Fusion",
-          "role": "Main DPS",
+          "name": "Shorekeeper",
+          "element": "Spectro",
+          "role": "Healer / Buffer",
           "costs": {
             "4": [
-              "DMG",
-              "Crit Rate"
+              "Crit DMG"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "HP%"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Liberation DMG",
+            "HP%",
+            "Crit Rate"
+          ],
+          "targetER": "130-140%"
+        },
+        {
+          "name": "Verina",
+          "element": "Spectro",
+          "role": "Healer / Buffer",
+          "costs": {
+            "4": [
+              "Healing Bonus"
             ],
             "3": [
               "Energy Recharge"
@@ -1115,33 +927,31 @@
             ]
           },
           "substats": [
-            "Crit Rate",
-            "Crit DMG",
             "Energy Recharge",
-            "ATK%",
-            "Basic DMG"
+            "ATK%"
           ],
-          "targetER": "125%"
+          "targetER": "220%+"
         }
       ]
     },
     {
-      "id": "trailblazing-star",
-      "name": "Trailblazing Star",
-      "element": "Fusion",
-      "setBonus": "2pc: Fusion DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD \u2014 fill in manually",
+      "id": "crown-of-valor",
+      "name": "Crown of Valor",
+      "element": "Universal",
+      "setBonus": "3pc: Upon gaining a Shield, increase the Resonator's ATK by 6% and Crit. DMG by 4% for 4s. This effect can be triggered once every 0.5s and stacks up to 5 times.",
+      "mainEcho": "Lady of the Sea / False Sovereign",
       "characters": [
         {
-          "name": "Aemeath",
-          "element": "Fusion",
+          "name": "Augusta",
+          "element": "Electro",
           "role": "Main DPS",
           "costs": {
             "4": [
-              "Crit DMG"
+              "DMG",
+              "Crit Rate"
             ],
             "3": [
-              "Fusion"
+              "Electro"
             ],
             "1": [
               "ATK %"
@@ -1152,9 +962,200 @@
             "Crit DMG",
             "Energy Recharge",
             "ATK%",
-            "Basic DMG"
+            "Heavy DMG"
           ],
-          "targetER": "120-130%"
+          "targetER": "120%"
+        },
+        {
+          "name": "Iuno",
+          "element": "Universal",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit DMG",
+            "Crit Rate",
+            "Energy Recharge",
+            "Liberation DMG",
+            "ATK%"
+          ],
+          "targetER": "120%"
+        }
+      ]
+    },
+    {
+      "id": "dream-of-the-lost-2pc-havoc",
+      "name": "Dream of the Lost + 2pc Havoc",
+      "element": "Universal",
+      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD — fill in manually",
+      "characters": [
+        {
+          "name": "Phrolova",
+          "element": "Havoc",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Skill DMG"
+          ],
+          "targetER": "0%"
+        }
+      ]
+    },
+    {
+      "id": "emperian-anthem",
+      "name": "Emperian Anthem",
+      "element": "Universal",
+      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD — fill in manually",
+      "characters": [
+        {
+          "name": "Zhezhi",
+          "element": "Glacio",
+          "role": "Sub-DPS / Buffer",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Glacio"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "Basic DMG",
+            "ATK%"
+          ],
+          "targetER": "140%"
+        }
+      ]
+    },
+    {
+      "id": "empyrean-anthem",
+      "name": "Empyrean Anthem",
+      "element": "Universal",
+      "setBonus": "2pc: Energy Regen + 10% | 5pc: Increase the Resonator's Coordinated Attack DMG by 80%. Upon a critical hit of Coordinated Attack, increase the active Resonator's ATK by 20% for 4s.",
+      "mainEcho": "Nightmare Tempest Mephis",
+      "characters": [
+        {
+          "name": "Zhezhi",
+          "element": "Glacio",
+          "role": "Sub-DPS / Buffer",
+          "costs": {
+            "4": [
+              "Crit DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Elem DMG%",
+              "Energy Regen"
+            ],
+            "1": [
+              "ATK%"
+            ]
+          },
+          "substats": [
+            "Energy Regen (20%)",
+            "Crit Rate/DMG",
+            "Resonance Skill Bonus"
+          ],
+          "targetER": "120%"
+        }
+      ]
+    },
+    {
+      "id": "halo-of-starry-radiance",
+      "name": "Halo of Starry Radiance",
+      "element": "Universal",
+      "setBonus": "2pc: Healing Bonus + 10%. | 5pc: When healing a Resonator in the team, every 1% of Off-Tune Buildup Rate grants a 0.2% ATK increase to all Resonators in the team for 4s, up to 25%. Effects of the same name cannot be stacked.",
+      "mainEcho": "TBD — fill in manually",
+      "characters": [
+        {
+          "name": "Mornye",
+          "element": "Universal",
+          "role": "Support / DEF",
+          "costs": {
+            "4": [
+              "Defence"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "DEF%"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "DEF%",
+            "Crit Rate",
+            "Liberation DMG"
+          ],
+          "targetER": "260%"
+        }
+      ]
+    },
+    {
+      "id": "law-of-harmony-2pc-aero",
+      "name": "Law of Harmony + 2pc Aero",
+      "element": "Universal",
+      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
+      "mainEcho": "TBD — fill in manually",
+      "characters": [
+        {
+          "name": "Qiuyuan",
+          "element": "Aero",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Heavy DMG"
+          ],
+          "targetER": "130%"
         }
       ]
     }
