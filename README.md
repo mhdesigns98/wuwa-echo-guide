@@ -45,15 +45,30 @@ For each echo set you get:
 
 *(Kept in sync with `data.json` — verify against it if this list looks stale.)*
 
+## Two Ways to Browse
+
+- **By set** (`index.html`) — click any set tab to see every character that uses it.
+- **My Roster** (`roster.html`) — select the characters you own and instantly see
+  which echo sets are worth keeping and which are safe to discard. Your selection is
+  saved in the browser. The two pages cross-link in the header.
+
 ## How to Use
 
-Just open the site and click any set tab. No account, no login, no install.
+Just open the site — no account, no login, no install.
 
-👉 **[View the site](https://mhdesigns98.github.io/wuwa-echo-guide/)**
+👉 **[View the site](https://wuwa-echo-guide.mikehayesdesign.workers.dev/)**
 
 ## Updating the Data
 
-All character and set data lives in **`data.json`**. The app fetches it at runtime, so you never need to touch `index.html` to update builds.
+All character and set data lives in **`data.json`**. The app fetches it at runtime, so you never need to touch `index.html` or `roster.html` to update builds.
+
+**The easy loop:** edit the Google Sheet → run the two scripts below → `git push`.
+Cloudflare auto-deploys within ~10 seconds. The Google Sheet is the source of truth for
+build recommendations — edit it from any browser; the local CSV is only a fallback.
+
+> ⚠️ **The sheet is authoritative and destructive.** On merge, any character in
+> `data.json` that is *not* in the sheet gets **purged**. Keep the sheet as your full
+> roster, not just a diff.
 
 The Prydwen scraper pipeline is retired — Prydwen now returns `410 Gone` on
 `page-data.json` and Cloudflare blocks direct page scraping. The pipeline has been
@@ -64,8 +79,8 @@ archived to `archive/prydwen/` (see that folder's `README.md` for details).
 runs `refresh.py --apply` every **Monday at 9:12am**, appending each dated report to
 `logs/refresh-cron.log`. Check that log for new sets/characters to add to the sheet.
 Manage it with `launchctl kickstart|bootout gui/$UID/com.mhayes.wuwa-refresh`.
-Note: this only updates the local `data.json` — publishing to GitHub Pages/Vercel
-is still a manual step.
+Note: this only updates the local `data.json` — publishing is a separate step
+(`git push`, which Cloudflare then auto-deploys).
 
 Refreshing the guide is now a **two-command workflow**, run in order:
 
@@ -149,20 +164,29 @@ Copy an existing set block and update the fields:
 
 Valid `element` values: `Electro`, `Aero`, `Spectro`, `Fusion`, `Glacio`, `Havoc`, `Support`, `Universal`
 
-### Quickest way to update on GitHub
+### Publishing changes
 
-1. Open `data.json` in the repo
-2. Click the **pencil icon** to edit
-3. Make your changes
-4. Click **Commit changes**
+The repo is Git-connected to Cloudflare, so publishing is just:
 
-The site updates within ~30 seconds. No build step, no terminal needed.
+```bash
+git add -A
+git commit -m "Update builds"
+git push
+```
+
+Cloudflare rebuilds and deploys automatically within ~10 seconds. No build step to
+configure. (You can also edit `data.json` directly on GitHub via the pencil icon and
+commit — the same auto-deploy fires — but the scripted sheet workflow above is the
+maintained path.)
 
 ## Tech
 
 - Plain HTML + React (loaded via CDN) — no build tools, no dependencies to install
+- `index.html` (browse by set) + `roster.html` (keep/discard by owned characters)
 - `data.json` is fetched at runtime, keeping data separate from the app
-- Hosted for free on GitHub Pages
+- Custom headers via Cloudflare `_headers` (security headers + `data.json` caching)
+- Hosted on **Cloudflare** (Git-connected, auto-deploy on push) at
+  <https://wuwa-echo-guide.mikehayesdesign.workers.dev/>
 
 ## Data Source
 
