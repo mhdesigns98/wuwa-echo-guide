@@ -1,0 +1,12 @@
+# Cloudflare Pages custom headers (translated from the old vercel.json).
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/data.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
