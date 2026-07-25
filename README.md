@@ -192,4 +192,9 @@ maintained path.)
 
 - **Game data** (echo sets, set bonuses, character roster): [static.nanoka.cc](https://static.nanoka.cc) (hakush.in revival), with [api.encore.moe](https://api.encore.moe) as fallback, via `scripts/refresh.py`.
 - **Build recommendations** (main stats, substats, roles): curated in the Google Sheet and merged via `scripts/import_sheet.py`. Always verify against the latest guides as the meta shifts with new patches.
+- **Echo set emblem images** (`assets/sets/*.webp`, shown on the My Roster page): the
+  per-set icons from the [Wuthering Waves Fandom wiki](https://wutheringwaves.fandom.com/wiki/Sonata)
+  (content under CC BY-SA), self-hosted so there's no runtime dependency on Fandom.
+  Re-fetch or add new-set images with `python3 scripts/fetch_set_images.py` (idempotent;
+  falls back to a CSS element emblem for any set without an image).
 - **Prydwen.gg** — *historical.* The original data source; its scraper pipeline is archived in `archive/prydwen/` and is no longer run (endpoint returns `410`, scraping is Cloudflare-blocked).

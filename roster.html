@@ -133,28 +133,124 @@ function CharacterCard({ char, setTheme, T }) {
   );
 }
 
-// Header block for a kept set — mirrors index.html's set header styling.
-function KeptSet({ set, ownedChars, theme, T }) {
+// Self-hosted set emblem (assets/sets/<id>.webp). Tries .webp then .png, then falls
+// back to a CSS element emblem so missing/new-set images degrade gracefully.
+function SetIcon({ set, theme, size = 46 }) {
+  const [stage, setStage] = useState(0); // 0 = webp, 1 = png, 2 = emblem
+  const srcs = [`./assets/sets/${set.id}.webp`, `./assets/sets/${set.id}.png`];
+  const box = { width:size, height:size, borderRadius:9, flexShrink:0, background:"#04060e", border:`1px solid ${theme.color}33` };
+  if (stage < 2) {
+    return (
+      <img src={srcs[stage]} width={size} height={size} loading="lazy" alt={set.name}
+        onError={() => setStage(s => s + 1)}
+        style={{ ...box, objectFit:"contain", padding:3 }} />
+    );
+  }
   return (
-    <div className="card-anim" style={{ marginBottom:26 }}>
-      <div style={{ padding:"14px 18px", borderRadius:10, background:theme.dim, border:`1px solid ${theme.color}40`, marginBottom:14, display:"flex", justifyContent:"space-between", alignItems:"flex-start", flexWrap:"wrap", gap:12 }}>
-        <div>
-          <div style={{ fontFamily:"Rajdhani", fontSize:22, fontWeight:700, color:theme.color, letterSpacing:"0.06em", lineHeight:1.1 }}>{set.name}</div>
-          <div style={{ color:"#8aaabb", fontSize:12, marginTop:5, letterSpacing:"0.02em" }}>{set.setBonus}</div>
-          {set.mainEcho && (
-            <div style={{ marginTop:5, fontSize:11, letterSpacing:"0.03em" }}>
-              <span style={{ color:"#5a7080" }}>Main Echo: </span>
-              <span style={{ color:theme.color }}>{set.mainEcho}</span>
-            </div>
-          )}
-        </div>
-        <div style={{ background:"#04060e", border:`1px solid ${theme.color}40`, borderRadius:6, padding:"5px 14px", fontFamily:"Rajdhani", fontSize:12, fontWeight:700, color:theme.color, letterSpacing:"0.08em", whiteSpace:"nowrap" }}>
-          {set.element.toUpperCase()} · {ownedChars.length} OWNED
+    <div style={{ ...box, background:theme.dim, border:`1px solid ${theme.color}40`, display:"flex", alignItems:"center", justifyContent:"center" }}>
+      <span style={{ width:size*0.32, height:size*0.32, background:theme.color, transform:"rotate(45deg)", borderRadius:2 }} />
+    </div>
+  );
+}
+
+// Roll up the substats every owned character in this set wants, ranked by how many
+// want it (then by best/earliest priority). This is the "what to farm" list.
+function aggregateSubstats(ownedChars) {
+  const tally = new Map(); // stat -> { stat, count, topPriority }
+  ownedChars.forEach(c => (c.substats || []).forEach((stat, i) => {
+    const cur = tally.get(stat) || { stat, count:0, topPriority:Infinity };
+    cur.count += 1;
+    cur.topPriority = Math.min(cur.topPriority, i);
+    tally.set(stat, cur);
+  }));
+  return [...tally.values()].sort((a, b) => b.count - a.count || a.topPriority - b.topPriority);
+}
+
+// Distinct primary main stat per cost tier across owned chars (first-seen order).
+function aggregateMains(ownedChars) {
+  const out = { 4:[], 3:[], 1:[] };
+  [4,3,1].forEach(cost => {
+    const seen = new Set();
+    ownedChars.forEach(c => {
+      const list = c.costs[cost] || c.costs[String(cost)] || [];
+      const primary = list[0];
+      if (primary && !seen.has(primary)) { seen.add(primary); out[cost].push(primary); }
+    });
+  });
+  return out;
+}
+
+// Compact, scannable "farm this set" card. Click to expand full per-character detail.
+function FarmCard({ set, ownedChars, theme, T }) {
+  const [open, setOpen] = useState(false);
+  const subs  = aggregateSubstats(ownedChars);
+  const mains = aggregateMains(ownedChars);
+  const topSubs = subs.slice(0, 6);
+  const label = { fontSize:9, color:"#6a8098", fontWeight:700, letterSpacing:"0.13em", textTransform:"uppercase" };
+
+  return (
+    <div className="card-anim" style={{ background:"#080c18", borderRadius:11, border:`1px solid ${theme.color}30`, overflow:"hidden", display:"flex", flexDirection:"column" }}>
+      <div style={{ height:2, background:`linear-gradient(90deg, ${theme.color}cc, transparent)` }} />
+
+      {/* header */}
+      <div style={{ padding:"12px 14px 10px", display:"flex", gap:11, alignItems:"center", background:`linear-gradient(90deg, ${theme.dim}, transparent 75%)` }}>
+        <SetIcon set={set} theme={theme} />
+        <div style={{ flex:1, minWidth:0 }}>
+          <div title={set.setBonus} style={{ fontFamily:"Rajdhani", fontSize:17, fontWeight:700, color:theme.color, letterSpacing:"0.03em", lineHeight:1.1 }}>{set.name}</div>
+          <div style={{ fontSize:10, color:"#5a7080", fontFamily:"Rajdhani", fontWeight:700, letterSpacing:"0.1em", marginTop:3 }}>
+            {set.element.toUpperCase()} · {ownedChars.length} OWNED
+          </div>
         </div>
       </div>
-      <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(300px, 1fr))", gap:14 }}>
-        {ownedChars.map(char => <CharacterCard key={char.name} char={char} setTheme={theme} T={T} />)}
+
+      {/* owned character chips */}
+      <div style={{ padding:"2px 14px 10px", display:"flex", flexWrap:"wrap", gap:5 }}>
+        {ownedChars.map(c => {
+          const ct = getTheme(T, c.element);
+          return (
+            <span key={c.name} style={{ display:"inline-flex", alignItems:"center", gap:5, background:"#04060e", border:`1px solid ${ct.color}44`, borderRadius:20, padding:"2px 9px 2px 7px", fontSize:11, color:"#c0d0e0", fontWeight:600 }}>
+              <span style={{ width:6, height:6, borderRadius:"50%", background:ct.color, flexShrink:0 }} />
+              {c.name}
+            </span>
+          );
+        })}
       </div>
+
+      {/* aggregated mains */}
+      <div style={{ padding:"0 14px 8px", display:"flex", gap:12, flexWrap:"wrap" }}>
+        {[4,3,1].map(cost => mains[cost].length > 0 && (
+          <div key={cost} style={{ display:"flex", alignItems:"baseline", gap:5 }}>
+            <span style={{ ...label, color:theme.color }}>{cost}✦</span>
+            <span style={{ fontSize:11, color:"#c0cfe0" }}>{mains[cost].join(" / ")}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* aggregated farm substats */}
+      <div style={{ padding:"0 14px 12px", marginTop:2 }}>
+        <div style={{ ...label, marginBottom:6 }}>Farm Substats</div>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:5 }}>
+          {topSubs.map((s, i) => (
+            <span key={s.stat} style={{ display:"inline-flex", alignItems:"center", gap:4, background: i===0 ? theme.dim : "#04060e", border:`1px solid ${i===0 ? theme.color+"70" : "#152234"}`, borderRadius:5, padding:"3px 8px", fontSize:11, color: i===0 ? theme.color : "#8fa4b8", fontWeight: i===0 ? 700 : 500 }}>
+              {i===0 && <span style={{ fontSize:8 }}>★</span>}
+              {s.stat}
+              {s.count > 1 && <span style={{ fontSize:9, color:"#5a7488", fontWeight:700 }}>×{s.count}</span>}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* expand → full build cards */}
+      <button onClick={() => setOpen(o => !o)}
+        style={{ marginTop:"auto", padding:"8px 14px", borderTop:`1px solid #101c28`, display:"flex", alignItems:"center", gap:7, fontFamily:"Rajdhani", fontSize:11, fontWeight:700, color:"#5a7a96", letterSpacing:"0.08em", background:"#060a12" }}>
+        <span style={{ fontSize:9, transition:"transform 0.15s", transform: open ? "rotate(90deg)" : "rotate(0deg)" }}>▶</span>
+        {open ? "HIDE BUILD DETAIL" : "SHOW BUILD DETAIL"}
+      </button>
+      {open && (
+        <div className="card-anim" style={{ padding:"12px 14px 14px", display:"grid", gridTemplateColumns:"1fr", gap:12, background:"#04060e" }}>
+          {ownedChars.map(char => <CharacterCard key={char.name} char={char} setTheme={theme} T={T} />)}
+        </div>
+      )}
     </div>
   );
 }
@@ -326,9 +422,11 @@ function App() {
             None of your owned characters map to a set in the guide.
           </div>
         ) : (
-          keptSets.map(({ set, ownedChars }) => (
-            <KeptSet key={set.id} set={set} ownedChars={ownedChars} theme={getTheme(T, set.element)} T={T} />
-          ))
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(340px, 1fr))", gap:12, alignItems:"start" }}>
+            {keptSets.map(({ set, ownedChars }) => (
+              <FarmCard key={set.id} set={set} ownedChars={ownedChars} theme={getTheme(T, set.element)} T={T} />
+            ))}
+          </div>
         )}
 
         {owned.size > 0 && discardedSets.length > 0 && (
