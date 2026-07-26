@@ -52,6 +52,7 @@ SET_NAME_MAP: Dict[str, str] = {
     "Halo of Radiance":            "Halo of Starry Radiance",
     "Flaming Clawprint":           "Flaming Clawprint",
     "Thread of Severed Fate":      "Thread of Severed Fate",
+    "Emperian Anthem":             "Empyrean Anthem",  # common misspelling of the in-game set
 }
 
 # Element to assign when a set is brand new (not yet in data.json).
@@ -180,6 +181,17 @@ def csv_to_builds(source) -> Dict[str, List[dict]]:
     """
     Parse CSV → {canonical_set_name: [character_dict, ...]}
     source can be a Path (local file) or a string of raw CSV text.
+
+    Alternate builds: a character may appear on multiple rows, one per echo set.
+    The optional "Build" column labels each row:
+      - empty or "Primary" → that character's primary build
+      - any other value (e.g. "Hybrid", "Hypercarry") → an alternate build
+    Exactly one row per character should be primary (if none is marked, the first
+    row is used and a warning is printed). Character dicts are annotated so the app
+    can showcase alternates without inflating the farm list:
+      - primary entry gets   char["alts"] = [{"set", "label"}, ...]  (if any alts)
+      - alternate entry gets  char["alt"] = True, char["build"] = <label>,
+                              char["primarySet"] = <primary set name>
     """
     builds: Dict[str, List[dict]] = {}
 
@@ -189,34 +201,71 @@ def csv_to_builds(source) -> Dict[str, List[dict]]:
         f = io.StringIO(source)
 
     with f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            name      = row.get("Character", "").strip()
-            set_raw   = row.get("Best Echo Set", "").strip()
-            set_name  = normalize_set_name(set_raw)
-            cost4     = parse_costs(row.get("4-Cost Main", ""))
-            cost3     = parse_costs(row.get("3-Cost Main", ""))
-            cost1     = parse_costs(row.get("1-Cost Main", ""))
-            substats  = parse_substats(row.get("Substat Priority", ""))
-            target_er = row.get("Target ER", "").strip()
+        rows = list(csv.DictReader(f))
 
-            if not name or not set_name:
-                continue
+    # First pass: parse valid rows and index them per character name.
+    parsed: List[dict] = []
+    char_rows: Dict[str, List[dict]] = {}
+    for row in rows:
+        name     = row.get("Character", "").strip()
+        set_raw  = row.get("Best Echo Set", "").strip()
+        set_name = normalize_set_name(set_raw)
+        if not name or not set_name:
+            continue
+        if set_raw != set_name:
+            print(f"[norm] '{set_raw}' → '{set_name}' for {name}")
 
-            if set_raw != set_name:
-                print(f"[norm] '{set_raw}' → '{set_name}' for {name}")
+        label = row.get("Build", "").strip()
+        rec = {
+            "name":     name,
+            "set_name": set_name,
+            "label":    label,
+            "cost4":    parse_costs(row.get("4-Cost Main", "")),
+            "cost3":    parse_costs(row.get("3-Cost Main", "")),
+            "cost1":    parse_costs(row.get("1-Cost Main", "")),
+            "substats": parse_substats(row.get("Substat Priority", "")),
+            "targetER": row.get("Target ER", "").strip(),
+        }
+        parsed.append(rec)
+        char_rows.setdefault(name, []).append(rec)
 
-            char: dict = {
-                "name":     name,
-                "element":  CHARACTER_ELEMENT_MAP.get(name, "Universal"),
-                "role":     infer_role(name, cost4),
-                "costs":    {"4": cost4, "3": cost3, "1": cost1},
-                "substats": substats,
-            }
-            if target_er:
-                char["targetER"] = target_er
+    # Determine each character's primary row (empty/"Primary" label, else first).
+    def is_primary_label(lbl: str) -> bool:
+        return lbl.strip().lower() in ("", "primary")
 
-            builds.setdefault(set_name, []).append(char)
+    primary_rec: Dict[str, dict] = {}
+    for name, recs in char_rows.items():
+        primaries = [r for r in recs if is_primary_label(r["label"])]
+        primary_rec[name] = primaries[0] if primaries else recs[0]
+        if len(recs) > 1 and len(primaries) != 1:
+            print(f"[warn] {name}: {len(recs)} rows, {len(primaries)} marked primary "
+                  f"— using '{primary_rec[name]['set_name']}' as primary")
+
+    # Second pass: build annotated character dicts.
+    for rec in parsed:
+        name = rec["name"]
+        char: dict = {
+            "name":     name,
+            "element":  CHARACTER_ELEMENT_MAP.get(name, "Universal"),
+            "role":     infer_role(name, rec["cost4"]),
+            "costs":    {"4": rec["cost4"], "3": rec["cost3"], "1": rec["cost1"]},
+            "substats": rec["substats"],
+        }
+        if rec["targetER"]:
+            char["targetER"] = rec["targetER"]
+
+        prim = primary_rec[name]
+        if rec is prim:
+            alts = [{"set": r["set_name"], "label": r["label"] or "Alt"}
+                    for r in char_rows[name] if r is not prim]
+            if alts:
+                char["alts"] = alts
+        else:
+            char["alt"]        = True
+            char["build"]      = rec["label"] or "Alt"
+            char["primarySet"] = prim["set_name"]
+
+        builds.setdefault(rec["set_name"], []).append(char)
 
     return builds
 

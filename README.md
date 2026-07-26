@@ -147,6 +147,25 @@ Open `data.json` and find the set you want to update. Each character follows thi
 - `costs` — list stats in priority order. First entry is the primary recommendation, additional entries appear as "or" alternatives.
 - `substats` — list in priority order. The first entry is highlighted as the top priority.
 
+### Alternate builds / alternate sets
+
+A character can be viable in more than one echo set (often with different stat
+priorities). Author these in the **Google Sheet** with the optional **`Build`** column:
+
+- Give the character **one row per build**, each with its own `Best Echo Set` and stats.
+- Leave `Build` **empty** (or `Primary`) on the main build; put a short label on the
+  alternates — e.g. `Hybrid`, `Hypercarry`, `Quickswap`.
+
+`import_sheet.py` then annotates the data so the app can showcase alternates:
+
+- the **primary** entry gets `alts: [{ set, label }]`,
+- each **alternate** entry gets `alt: true`, `build: "<label>"`, `primarySet: "<name>"`.
+
+On the **My Roster** page, only the **primary** set counts toward what you keep/farm
+(so the checklist stays lean); alternates show up as an *"Also viable"* note and, on a
+set that's someone else's primary, as an `ALT`-tagged character chip. On **Browse by
+Set**, alternate appearances carry an `ALT · <label>` badge and a `Primary set:` line.
+
 ### Adding a new set
 
 Copy an existing set block and update the fields:

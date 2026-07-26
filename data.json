@@ -633,6 +633,12 @@
             "Crit Rate/DMG",
             "ATK%",
             "Resonance Skill Bonus"
+          ],
+          "alts": [
+            {
+              "set": "Dream of the Lost + 2pc Havoc",
+              "label": "Hybrid"
+            }
           ]
         }
       ]
@@ -1022,41 +1028,10 @@
             "ATK%",
             "Skill DMG"
           ],
-          "targetER": "0%"
-        }
-      ]
-    },
-    {
-      "id": "emperian-anthem",
-      "name": "Emperian Anthem",
-      "element": "Universal",
-      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD — fill in manually",
-      "characters": [
-        {
-          "name": "Zhezhi",
-          "element": "Glacio",
-          "role": "Sub-DPS / Buffer",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Glacio"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Energy Recharge",
-            "Crit DMG",
-            "Crit Rate",
-            "Basic DMG",
-            "ATK%"
-          ],
-          "targetER": "140%"
+          "targetER": "0%",
+          "alt": true,
+          "build": "Hybrid",
+          "primarySet": "Dream of the Lost"
         }
       ]
     },

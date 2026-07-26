@@ -82,8 +82,13 @@ function CharacterCard({ char, setTheme, T }) {
       <div style={{ height:2, background:`linear-gradient(90deg, ${ct.color}cc, transparent)` }} />
       <div style={{ padding:"12px 16px 10px", borderBottom:"1px solid #182030", display:"flex", justifyContent:"space-between", alignItems:"flex-start", background:`linear-gradient(90deg, ${ct.dim}, transparent 70%)` }}>
         <div>
-          <div style={{ fontFamily:"Rajdhani", fontSize:19, fontWeight:700, color:"#f0f4f8", letterSpacing:"0.04em" }}>{char.name}</div>
+          <div style={{ display:"flex", alignItems:"center", gap:7, flexWrap:"wrap" }}>
+            <span style={{ fontFamily:"Rajdhani", fontSize:19, fontWeight:700, color:"#f0f4f8", letterSpacing:"0.04em" }}>{char.name}</span>
+            {char.alt && <span style={{ fontSize:8, color:ct.color, fontWeight:700, letterSpacing:"0.06em", border:`1px solid ${ct.color}66`, borderRadius:3, padding:"1px 4px", whiteSpace:"nowrap" }}>ALT · {char.build}</span>}
+          </div>
           <div style={{ fontSize:11, color:"#7a90a8", marginTop:2, letterSpacing:"0.03em" }}>{char.role}</div>
+          {char.alt && char.primarySet && <div style={{ fontSize:10, color:"#5a7080", marginTop:2 }}>Primary set: {char.primarySet}</div>}
+          {char.alts && char.alts.length > 0 && <div style={{ fontSize:10, color:"#5a7080", marginTop:2 }}>Also viable: {char.alts.map(a => a.set + (a.label && a.label !== "Alt" ? ` (${a.label})` : "")).join(" · ")}</div>}
         </div>
         <span style={{ background:ct.badge, border:`1px solid ${ct.color}55`, color:ct.color, padding:"3px 10px", borderRadius:5, fontSize:10, fontWeight:700, fontFamily:"Rajdhani", letterSpacing:"0.1em", whiteSpace:"nowrap", marginTop:2 }}>
           {char.element.toUpperCase()}
