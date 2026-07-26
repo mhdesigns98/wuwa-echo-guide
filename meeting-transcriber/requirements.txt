@@ -1,0 +1,9 @@
+# Core pipeline
+faster-whisper>=1.0.0     # local speech-to-text (CTranslate2 Whisper)
+requests>=2.31            # talk to the local Ollama HTTP API
+
+# macOS menu-bar app
+rumps>=0.4.0              # menu-bar UI (macOS only)
+
+# TOML config parsing on Python < 3.11 (stdlib tomllib is used on 3.11+)
+tomli>=2.0 ; python_version < "3.11"

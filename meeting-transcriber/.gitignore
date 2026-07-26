@@ -1,0 +1,14 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local config (copy from config.example.toml)
+config.toml
+
+# Recorded audio / generated notes if kept inside the project
+MeetingNotes/
+*.wav
+*.m4a
+
+.DS_Store
