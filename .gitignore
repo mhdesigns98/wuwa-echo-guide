@@ -14,3 +14,10 @@ logs/
 
 # Orphan nested repo (unrelated old clone) — do not track as a submodule
 Wuthering Waves Echo Guide/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
