@@ -38,7 +38,7 @@ ROOT      = Path(__file__).resolve().parents[1]
 DATA_JSON = ROOT / "data.json"
 
 # Published Google Sheet CSV URL — update this if the sheet changes
-SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRFgZwdLizUu1Ztiw-CkNLktl7UQqatiAMeNbXHMWOdhqa_s6b1cCm_D2qJbT5FSgcOfwifU2Q3aeGJ/pub?output=csv"
+SHEET_URL = "https://docs.google.com/spreadsheets/d/1UK8nGzrJ0rOovYcC88Ij5E1U6b9lhoJqFddcgXGNrYQ/export?format=csv"
 
 # ---------------------------------------------------------------------------
 # Name normalisation maps — add entries here when the sheet uses a slightly
@@ -191,21 +191,27 @@ def fetch_sheet_csv() -> str:
         return resp.read().decode("utf-8-sig", errors="ignore")
 
 
+# Element names that can appear as a 3-Cost Main (i.e. "<Element> DMG%") or as a bare
+# 2pc secondary. Used to auto-detect a character's element and to spot 2pc fillers.
+ELEMENTS = {"Aero", "Electro", "Fusion", "Glacio", "Havoc", "Spectro"}
+
+
 def csv_to_builds(source) -> Dict[str, List[dict]]:
     """
     Parse CSV → {canonical_set_name: [character_dict, ...]}
     source can be a Path (local file) or a string of raw CSV text.
 
-    Alternate builds: a character may appear on multiple rows, one per echo set.
-    The optional "Build" column labels each row:
-      - empty or "Primary" → that character's primary build
-      - any other value (e.g. "Hybrid", "Hypercarry") → an alternate build
-    Exactly one row per character should be primary (if none is marked, the first
-    row is used and a warning is printed). Character dicts are annotated so the app
-    can showcase alternates without inflating the farm list:
-      - primary entry gets   char["alts"] = [{"set", "label"}, ...]  (if any alts)
-      - alternate entry gets  char["alt"] = True, char["build"] = <label>,
-                              char["primarySet"] = <primary set name>
+    One row per character. Columns: Character, Best Echo Set, Secondary Echo Set,
+    4-Cost Main, 3-Cost Main, 1-Cost Main, Substat Priority, Target ER.
+
+    Element is auto-detected from the 3-Cost Main (which is the element for DPS, e.g.
+    "Fusion"), falling back to CHARACTER_ELEMENT_MAP then "Universal".
+
+    Alternate sets: a non-empty "Secondary Echo Set" marks a second viable set. The
+    primary entry gets char["alts"] = [{"set", "label"}]; the secondary set also gets
+    an alt-tagged copy of the build (char["alt"]=True, "build"="Alt", "primarySet"=…)
+    so it shows up under that set too. A bare element secondary (e.g. "Aero") is a 2pc
+    filler — recorded only as an "also viable: 2pc <Element>" note, not a real set.
     """
     builds: Dict[str, List[dict]] = {}
 
@@ -217,9 +223,6 @@ def csv_to_builds(source) -> Dict[str, List[dict]]:
     with f:
         rows = list(csv.DictReader(f))
 
-    # First pass: parse valid rows and index them per character name.
-    parsed: List[dict] = []
-    char_rows: Dict[str, List[dict]] = {}
     for row in rows:
         name     = row.get("Character", "").strip()
         set_raw  = row.get("Best Echo Set", "").strip()
@@ -229,57 +232,46 @@ def csv_to_builds(source) -> Dict[str, List[dict]]:
         if set_raw != set_name:
             print(f"[norm] '{set_raw}' → '{set_name}' for {name}")
 
-        label = row.get("Build", "").strip()
-        rec = {
-            "name":     name,
-            "set_name": set_name,
-            "label":    label,
-            "cost4":    parse_costs(row.get("4-Cost Main", "")),
-            "cost3":    parse_costs(row.get("3-Cost Main", "")),
-            "cost1":    parse_costs(row.get("1-Cost Main", "")),
-            "substats": parse_substats(row.get("Substat Priority", "")),
-            "targetER": row.get("Target ER", "").strip(),
-        }
-        parsed.append(rec)
-        char_rows.setdefault(name, []).append(rec)
+        cost4     = parse_costs(row.get("4-Cost Main", ""))
+        cost3_raw = row.get("3-Cost Main", "").strip()
+        cost3     = parse_costs(cost3_raw)
+        cost1     = parse_costs(row.get("1-Cost Main", ""))
+        substats  = parse_substats(row.get("Substat Priority", ""))
+        target_er = row.get("Target ER", "").strip()
+        element   = cost3_raw if cost3_raw in ELEMENTS else CHARACTER_ELEMENT_MAP.get(name, "Universal")
 
-    # Determine each character's primary row (empty/"Primary" label, else first).
-    def is_primary_label(lbl: str) -> bool:
-        return lbl.strip().lower() in ("", "primary")
+        def make_char() -> dict:
+            c = {
+                "name":     name,
+                "element":  element,
+                "role":     infer_role(name, cost4),
+                "costs":    {"4": list(cost4), "3": list(cost3), "1": list(cost1)},
+                "substats": list(substats),
+            }
+            if target_er:
+                c["targetER"] = target_er
+            return c
 
-    primary_rec: Dict[str, dict] = {}
-    for name, recs in char_rows.items():
-        primaries = [r for r in recs if is_primary_label(r["label"])]
-        primary_rec[name] = primaries[0] if primaries else recs[0]
-        if len(recs) > 1 and len(primaries) != 1:
-            print(f"[warn] {name}: {len(recs)} rows, {len(primaries)} marked primary "
-                  f"— using '{primary_rec[name]['set_name']}' as primary")
+        char = make_char()
 
-    # Second pass: build annotated character dicts.
-    for rec in parsed:
-        name = rec["name"]
-        char: dict = {
-            "name":     name,
-            "element":  CHARACTER_ELEMENT_MAP.get(name, "Universal"),
-            "role":     infer_role(name, rec["cost4"]),
-            "costs":    {"4": rec["cost4"], "3": rec["cost3"], "1": rec["cost1"]},
-            "substats": rec["substats"],
-        }
-        if rec["targetER"]:
-            char["targetER"] = rec["targetER"]
+        # Secondary / alternate echo set.
+        sec_raw  = row.get("Secondary Echo Set", "").strip()
+        sec_name = normalize_set_name(sec_raw) if sec_raw else ""
+        if sec_name and sec_name != set_name:
+            if sec_name in ELEMENTS:
+                # bare element = 2pc filler; note only, no separate set/entry
+                char["alts"] = [{"set": f"2pc {sec_name}", "label": "Alt"}]
+            else:
+                if sec_raw != sec_name:
+                    print(f"[norm] secondary '{sec_raw}' → '{sec_name}' for {name}")
+                char["alts"] = [{"set": sec_name, "label": "Alt"}]
+                alt = make_char()
+                alt["alt"]        = True
+                alt["build"]      = "Alt"
+                alt["primarySet"] = set_name
+                builds.setdefault(sec_name, []).append(alt)
 
-        prim = primary_rec[name]
-        if rec is prim:
-            alts = [{"set": r["set_name"], "label": r["label"] or "Alt"}
-                    for r in char_rows[name] if r is not prim]
-            if alts:
-                char["alts"] = alts
-        else:
-            char["alt"]        = True
-            char["build"]      = rec["label"] or "Alt"
-            char["primarySet"] = prim["set_name"]
-
-        builds.setdefault(rec["set_name"], []).append(char)
+        builds.setdefault(set_name, []).append(char)
 
     return builds
 
@@ -325,8 +317,16 @@ def merge(data: dict, builds: Dict[str, List[dict]]) -> tuple[dict, list]:
             by_name[set_name] = new_set
             log.append(f"[NEW]  {set_name} ({element}) — {len(chars)} chars (fill in setBonus + mainEcho)")
 
-    # --- Step 2: purge characters not in the sheet from ALL sets ---
+    # --- Step 2: reconcile every existing set against the sheet ---
+    csv_set_names = set(builds.keys())
     for s in sets:
+        # A set the sheet no longer references is stale — drop its members so it gets
+        # pruned below (sheet is the single source of truth for set membership).
+        if s["name"] not in csv_set_names:
+            if s.get("characters"):
+                log.append(f"[drop]  {s['name']}: not in sheet, removing {[c['name'] for c in s['characters']]}")
+                s["characters"] = []
+            continue
         before = [c["name"] for c in s.get("characters", [])]
         kept   = [c for c in s.get("characters", []) if c["name"] in csv_names]
         purged = [n for n in before if n not in csv_names]

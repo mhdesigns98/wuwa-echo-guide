@@ -147,19 +147,20 @@ Open `data.json` and find the set you want to update. Each character follows thi
 - `costs` — list stats in priority order. First entry is the primary recommendation, additional entries appear as "or" alternatives.
 - `substats` — list in priority order. The first entry is highlighted as the top priority.
 
-### Alternate builds / alternate sets
+### Alternate sets
 
-A character can be viable in more than one echo set (often with different stat
-priorities). Author these in the **Google Sheet** with the optional **`Build`** column:
-
-- Give the character **one row per build**, each with its own `Best Echo Set` and stats.
-- Leave `Build` **empty** (or `Primary`) on the main build; put a short label on the
-  alternates — e.g. `Hybrid`, `Hypercarry`, `Quickswap`.
-
-`import_sheet.py` then annotates the data so the app can showcase alternates:
+A character can be viable in a second echo set. Add it in the **`Secondary Echo Set`**
+column (one row per character — no extra rows needed). On import:
 
 - the **primary** entry gets `alts: [{ set, label }]`,
-- each **alternate** entry gets `alt: true`, `build: "<label>"`, `primarySet: "<name>"`.
+- the **secondary** set gets an `alt`-tagged copy of the build (`alt: true`,
+  `build: "Alt"`, `primarySet: "<name>"`) so the character also appears under it.
+- a **bare element** in that column (e.g. `Aero`) is treated as a 2pc filler and shown
+  as an *"also viable: 2pc Aero"* note rather than a real set.
+
+Element is auto-detected from the `3-Cost Main` column (the element for DPS), falling
+back to `CHARACTER_ELEMENT_MAP` then `Universal` — so new characters usually need no
+code change.
 
 On the **My Roster** page, only the **primary** set counts toward what you keep/farm
 (so the checklist stays lean); alternates show up as an *"Also viable"* note and, on a

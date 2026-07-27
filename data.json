@@ -115,7 +115,8 @@
             "Crit Rate",
             "Crit DMG",
             "ATK%"
-          ]
+          ],
+          "targetER": "130%"
         }
       ]
     },
@@ -132,21 +133,22 @@
           "role": "Main DPS",
           "costs": {
             "4": [
-              "Crit DMG",
+              "DMG",
               "Crit Rate"
             ],
             "3": [
-              "Aero DMG%"
+              "Aero"
             ],
             "1": [
-              "ATK%"
+              "ATK %"
             ]
           },
           "substats": [
-            "Energy Regen (25%)",
-            "Crit Rate/DMG",
+            "Crit DMG",
+            "Crit Rate",
+            "Energy Recharge",
             "ATK%",
-            "Heavy ATK Bonus"
+            "Heavy DMG"
           ],
           "targetER": "125%"
         }
@@ -157,7 +159,7 @@
       "name": "Sound of True Name",
       "element": "Aero",
       "setBonus": "2pc: Aero DMG + 10% | 5pc: Dealing Echo Skill DMG to enemies increases the Resonator's Echo Skill Crit. Rate by 20%, and grants 15% Aero DMG Bonus for 5s.",
-      "mainEcho": "TBD — fill in manually",
+      "mainEcho": "",
       "characters": [
         {
           "name": "Sigrika",
@@ -218,7 +220,7 @@
           "targetER": "160%+"
         },
         {
-          "name": "Jiyan",
+          "name": "Iuno",
           "element": "Aero",
           "role": "Main DPS",
           "costs": {
@@ -237,10 +239,13 @@
             "Crit DMG",
             "Crit Rate",
             "Energy Recharge",
-            "ATK%",
-            "Heavy DMG"
+            "Liberation DMG",
+            "ATK%"
           ],
-          "targetER": "125%"
+          "targetER": "120%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Crown of Valor"
         }
       ]
     },
@@ -249,7 +254,7 @@
       "name": "Celestial Light",
       "element": "Spectro",
       "setBonus": "2pc: Spectro DMG + 10%. | 5pc: Spectro DMG + 30% for 15s after releasing Intro Skill.",
-      "mainEcho": "TBD — fill in manually",
+      "mainEcho": "",
       "characters": [
         {
           "name": "Jinhsi",
@@ -307,7 +312,10 @@
             "Heavy DMG",
             "Energy Recharge"
           ],
-          "targetER": "115%"
+          "targetER": "115%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Moonlit Clouds"
         },
         {
           "name": "Zani",
@@ -365,7 +373,13 @@
             "ATK%",
             "Basic DMG"
           ],
-          "targetER": "120%"
+          "targetER": "120%",
+          "alts": [
+            {
+              "set": "Moonlit Clouds",
+              "label": "Alt"
+            }
+          ]
         }
       ]
     },
@@ -432,7 +446,13 @@
             "ATK%",
             "Heavy DMG"
           ],
-          "targetER": "125%"
+          "targetER": "125%",
+          "alts": [
+            {
+              "set": "Molten Rift",
+              "label": "Alt"
+            }
+          ]
         }
       ]
     },
@@ -478,6 +498,34 @@
       "mainEcho": "Nightmare Inferno Rider",
       "characters": [
         {
+          "name": "Brant",
+          "element": "Fusion",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "125%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Tidebreaking Courage"
+        },
+        {
           "name": "Changli",
           "element": "Fusion",
           "role": "Main DPS",
@@ -501,6 +549,33 @@
             "Basic DMG"
           ],
           "targetER": "125%"
+        },
+        {
+          "name": "Galbrena",
+          "element": "Fusion",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Fusion"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Heavy DMG"
+          ],
+          "targetER": "125%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Flamewing's Shadow"
         }
       ]
     },
@@ -509,7 +584,7 @@
       "name": "Tidebreaking Courage",
       "element": "Fusion",
       "setBonus": "2pc: Energy Regen + 10% | 5pc: Increase the Resonator's ATK by 15%. Reaching 250% Energy Regen increases all Attribute DMG by 30% for the Resonator.",
-      "mainEcho": "TBD — fill in manually",
+      "mainEcho": "",
       "characters": [
         {
           "name": "Brant",
@@ -534,7 +609,13 @@
             "ATK%",
             "Basic DMG"
           ],
-          "targetER": "250%"
+          "targetER": "125%",
+          "alts": [
+            {
+              "set": "Molten Rift",
+              "label": "Alt"
+            }
+          ]
         }
       ]
     },
@@ -543,7 +624,7 @@
       "name": "Trailblazing Star",
       "element": "Fusion",
       "setBonus": "2pc: Fusion DMG + 10% | 5pc: Inflicting Fusion Burst or Tune Rupture - Shifting increases the Resonator's Crit. Rate by 20% and grants 20% Fusion DMG Bonus for 8s.",
-      "mainEcho": "TBD — fill in manually",
+      "mainEcho": "",
       "characters": [
         {
           "name": "Aemeath",
@@ -618,26 +699,27 @@
           "role": "Main DPS",
           "costs": {
             "4": [
-              "Crit DMG",
+              "DMG",
               "Crit Rate"
             ],
             "3": [
-              "Havoc DMG%"
+              "Havoc"
             ],
             "1": [
-              "ATK%"
+              "ATK %"
             ]
           },
           "substats": [
-            "No ER needed",
-            "Crit Rate/DMG",
+            "Crit Rate",
+            "Crit DMG",
             "ATK%",
-            "Resonance Skill Bonus"
+            "Skill DMG"
           ],
+          "targetER": "0%",
           "alts": [
             {
-              "set": "Dream of the Lost + 2pc Havoc",
-              "label": "Hybrid"
+              "set": "Midnight Veil",
+              "label": "Alt"
             }
           ]
         }
@@ -651,9 +733,9 @@
       "mainEcho": "Laulyun / Nightmare Impermanence Heron",
       "characters": [
         {
-          "name": "Camellya",
+          "name": "Cantarella",
           "element": "Havoc",
-          "role": "Main DPS",
+          "role": "Healer / Buffer",
           "costs": {
             "4": [
               "DMG",
@@ -673,7 +755,63 @@
             "ATK%",
             "Basic DMG"
           ],
-          "targetER": "115-125%"
+          "targetER": "130%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Rejuvenating Glow"
+        },
+        {
+          "name": "Danjin",
+          "element": "Havoc",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Heavy DMG"
+          ],
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Moonlit Clouds"
+        },
+        {
+          "name": "Phrolova",
+          "element": "Havoc",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Skill DMG"
+          ],
+          "targetER": "0%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Dream of the Lost"
         },
         {
           "name": "Roccia",
@@ -698,7 +836,13 @@
             "ATK%",
             "Heavy DMG"
           ],
-          "targetER": "120%"
+          "targetER": "120%",
+          "alts": [
+            {
+              "set": "Moonlit Clouds",
+              "label": "Alt"
+            }
+          ]
         }
       ]
     },
@@ -731,7 +875,13 @@
             "ATK%",
             "Liberation DMG"
           ],
-          "targetER": "130-140%"
+          "targetER": "130-140%",
+          "alts": [
+            {
+              "set": "Rejuvenating Glow",
+              "label": "Alt"
+            }
+          ]
         }
       ]
     },
@@ -740,32 +890,8 @@
       "name": "Moonlit Clouds",
       "element": "Support",
       "setBonus": "2pc: Energy Regen + 10%. | 5pc: Upon using Outro Skill, increases the ATK of the next Resonator by 22.5% for 15s.",
-      "mainEcho": "TBD — fill in manually",
+      "mainEcho": "",
       "characters": [
-        {
-          "name": "Buling",
-          "element": "Electro",
-          "role": "Main DPS",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Electro"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Crit Rate",
-            "Crit DMG",
-            "Energy Recharge",
-            "ATK%"
-          ],
-          "targetER": "140%"
-        },
         {
           "name": "Danjin",
           "element": "Havoc",
@@ -787,32 +913,13 @@
             "Crit DMG",
             "ATK%",
             "Heavy DMG"
-          ]
-        },
-        {
-          "name": "Jianxin",
-          "element": "Aero",
-          "role": "Support / Sub-DPS",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Aero"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Energy Recharge",
-            "Crit DMG",
-            "Crit Rate",
-            "ATK%",
-            "Liberation DMG"
           ],
-          "targetER": "120%"
+          "alts": [
+            {
+              "set": "Midnight Veil",
+              "label": "Alt"
+            }
+          ]
         },
         {
           "name": "Lumi",
@@ -837,6 +944,208 @@
             "ATK%"
           ],
           "targetER": "140%"
+        },
+        {
+          "name": "Lynae",
+          "element": "Spectro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Spectro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit DMG",
+            "Crit Rate",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "120%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Pact of Neonlight Leap"
+        },
+        {
+          "name": "Phoebe",
+          "element": "Spectro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Spectro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Heavy DMG",
+            "Energy Recharge"
+          ],
+          "targetER": "115%",
+          "alts": [
+            {
+              "set": "Eternal Radiance",
+              "label": "Alt"
+            }
+          ]
+        },
+        {
+          "name": "Roccia",
+          "element": "Havoc",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit Rate",
+            "Crit DMG",
+            "ATK%",
+            "Heavy DMG"
+          ],
+          "targetER": "120%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Midnight Veil"
+        },
+        {
+          "name": "Zhezhi",
+          "element": "Glacio",
+          "role": "Sub-DPS / Buffer",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Glacio"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "Basic DMG",
+            "ATK%"
+          ],
+          "targetER": "125%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Empyrean Anthem"
+        },
+        {
+          "name": "Lucilla",
+          "element": "Glacio",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Glacio"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "100%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Wishes of Quiet Snowfall"
+        },
+        {
+          "name": "Rebecca",
+          "element": "Electro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Electro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "118%",
+          "alts": [
+            {
+              "set": "Shadow of Shattered Dreams",
+              "label": "Alt"
+            }
+          ]
+        },
+        {
+          "name": "Yin Lin",
+          "element": "Electro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Electro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Skill DMG"
+          ],
+          "targetER": "120%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Empyrean Anthem"
         }
       ]
     },
@@ -869,6 +1178,30 @@
           "targetER": "160%+"
         },
         {
+          "name": "Buling",
+          "element": "Electro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Electro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%"
+          ],
+          "targetER": "140%"
+        },
+        {
           "name": "Cantarella",
           "element": "Havoc",
           "role": "Healer / Buffer",
@@ -891,7 +1224,92 @@
             "ATK%",
             "Basic DMG"
           ],
-          "targetER": "150%+"
+          "targetER": "130%",
+          "alts": [
+            {
+              "set": "Midnight Veil",
+              "label": "Alt"
+            }
+          ]
+        },
+        {
+          "name": "Chisa",
+          "element": "Havoc",
+          "role": "Sustain / Support",
+          "costs": {
+            "4": [
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Liberation DMG"
+          ],
+          "targetER": "130-140%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Thread of Severed Fate"
+        },
+        {
+          "name": "Jianxin",
+          "element": "Aero",
+          "role": "Support / Sub-DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Aero"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Liberation DMG"
+          ],
+          "targetER": "120%"
+        },
+        {
+          "name": "Mornye",
+          "element": "Universal",
+          "role": "Support / DEF",
+          "costs": {
+            "4": [
+              "Defence"
+            ],
+            "3": [
+              "Energy Recharge"
+            ],
+            "1": [
+              "DEF%"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "DEF%",
+            "Crit Rate",
+            "Liberation DMG"
+          ],
+          "targetER": "240%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Halo of Starry Radiance"
         },
         {
           "name": "Shorekeeper",
@@ -915,7 +1333,7 @@
             "HP%",
             "Crit Rate"
           ],
-          "targetER": "130-140%"
+          "targetER": "250%"
         },
         {
           "name": "Verina",
@@ -974,7 +1392,7 @@
         },
         {
           "name": "Iuno",
-          "element": "Universal",
+          "element": "Aero",
           "role": "Main DPS",
           "costs": {
             "4": [
@@ -995,43 +1413,13 @@
             "Liberation DMG",
             "ATK%"
           ],
-          "targetER": "120%"
-        }
-      ]
-    },
-    {
-      "id": "dream-of-the-lost-2pc-havoc",
-      "name": "Dream of the Lost + 2pc Havoc",
-      "element": "Universal",
-      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD — fill in manually",
-      "characters": [
-        {
-          "name": "Phrolova",
-          "element": "Havoc",
-          "role": "Main DPS",
-          "costs": {
-            "4": [
-              "DMG",
-              "Crit Rate"
-            ],
-            "3": [
-              "Havoc"
-            ],
-            "1": [
-              "ATK %"
-            ]
-          },
-          "substats": [
-            "Crit Rate",
-            "Crit DMG",
-            "ATK%",
-            "Skill DMG"
-          ],
-          "targetER": "0%",
-          "alt": true,
-          "build": "Hybrid",
-          "primarySet": "Dream of the Lost"
+          "targetER": "120%",
+          "alts": [
+            {
+              "set": "Windward Pilgrimage",
+              "label": "Alt"
+            }
+          ]
         }
       ]
     },
@@ -1048,23 +1436,61 @@
           "role": "Sub-DPS / Buffer",
           "costs": {
             "4": [
-              "Crit DMG",
+              "DMG",
               "Crit Rate"
             ],
             "3": [
-              "Elem DMG%",
-              "Energy Regen"
+              "Glacio"
             ],
             "1": [
-              "ATK%"
+              "ATK %"
             ]
           },
           "substats": [
-            "Energy Regen (20%)",
-            "Crit Rate/DMG",
-            "Resonance Skill Bonus"
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "Basic DMG",
+            "ATK%"
           ],
-          "targetER": "120%"
+          "targetER": "125%",
+          "alts": [
+            {
+              "set": "Moonlit Clouds",
+              "label": "Alt"
+            }
+          ]
+        },
+        {
+          "name": "Yin Lin",
+          "element": "Electro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Electro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Skill DMG"
+          ],
+          "targetER": "120%",
+          "alts": [
+            {
+              "set": "Moonlit Clouds",
+              "label": "Alt"
+            }
+          ]
         }
       ]
     },
@@ -1073,7 +1499,7 @@
       "name": "Halo of Starry Radiance",
       "element": "Universal",
       "setBonus": "2pc: Healing Bonus + 10%. | 5pc: When healing a Resonator in the team, every 1% of Off-Tune Buildup Rate grants a 0.2% ATK increase to all Resonators in the team for 4s, up to 25%. Effects of the same name cannot be stacked.",
-      "mainEcho": "TBD — fill in manually",
+      "mainEcho": "",
       "characters": [
         {
           "name": "Mornye",
@@ -1097,16 +1523,96 @@
             "Crit Rate",
             "Liberation DMG"
           ],
-          "targetER": "260%"
+          "targetER": "240%",
+          "alts": [
+            {
+              "set": "Rejuvenating Glow",
+              "label": "Alt"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "law-of-harmony-2pc-aero",
-      "name": "Law of Harmony + 2pc Aero",
+      "id": "chromatic-foam",
+      "name": "Chromatic Foam",
+      "element": "Fusion",
+      "setBonus": "2pc: Fusion DMG + 10% | 5pc: When the Resonator inflicts Fusion Burst on the enemies, they gain the following effects: Gain 10% Fusion DMG Bonus for 15 s. While this effect is active, casting an Outro Skill grants the incoming Resonator 25% Fusion DMG Bonus for 15s.",
+      "mainEcho": "",
+      "characters": [
+        {
+          "name": "Denia",
+          "element": "Fusion",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Fusion"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Liberation DMG"
+          ],
+          "targetER": "108%-122%",
+          "alts": [
+            {
+              "set": "Reel of Spliced Memories",
+              "label": "Alt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "havoc-eclipse",
+      "name": "Havoc Eclipse",
+      "element": "Havoc",
+      "setBonus": "2pc: Havoc DMG + 10%. | 5pc: Havoc DMG + 7.5% after releasing Basic Attack or Heavy Attack. This effect stacks up to 4 times, each stack lasts 15s.",
+      "mainEcho": "",
+      "characters": [
+        {
+          "name": "Camellya",
+          "element": "Havoc",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "115-125%"
+        }
+      ]
+    },
+    {
+      "id": "law-of-harmony",
+      "name": "Law of Harmony",
       "element": "Universal",
-      "setBonus": "2pc: Universal DMG +10% | 5pc: See Prydwen.gg for 5pc bonus",
-      "mainEcho": "TBD — fill in manually",
+      "setBonus": "3pc: Casting Echo Skill grants 30% Heavy Attack DMG Bonus to the caster for 4s. Additionally, all Resonators in the team gain 4% Echo Skill DMG Bonus for 30s, stacking up to 4 times. Echoes of the same name can only trigger this effect once. The record of Echo triggering this effect is cleared along with this effect. At 4 stacks, casting Echo Skill again resets the duration of this effect.",
+      "mainEcho": "",
       "characters": [
         {
           "name": "Qiuyuan",
@@ -1130,7 +1636,210 @@
             "ATK%",
             "Heavy DMG"
           ],
-          "targetER": "130%"
+          "targetER": "130%",
+          "alts": [
+            {
+              "set": "2pc Aero",
+              "label": "Alt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reel-of-spliced-memories",
+      "name": "Reel of Spliced Memories",
+      "element": "Universal",
+      "setBonus": "2pc: ATK + 10% | 5pc: Inflicting Tune Rupture - Shifting or Tune Strain - Shifting on enemies increases the Tune Break Boost of Resonators in the team by 20 for 30s. Effects of the same name do not stack.",
+      "mainEcho": "",
+      "characters": [
+        {
+          "name": "Denia",
+          "element": "Fusion",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Fusion"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Liberation DMG"
+          ],
+          "targetER": "108%-122%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Chromatic Foam"
+        }
+      ]
+    },
+    {
+      "id": "shadow-of-shattered-dreams",
+      "name": "Shadow of Shattered Dreams",
+      "element": "Universal",
+      "setBonus": "1pc: Inflicting Hack - Shifting on the target grants 35% Basic Attack DMG Bonus and Heavy Attack DMG Bonus for 15s.",
+      "mainEcho": "",
+      "characters": [
+        {
+          "name": "Rebecca",
+          "element": "Electro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Electro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "118%",
+          "alt": true,
+          "build": "Alt",
+          "primarySet": "Moonlit Clouds"
+        },
+        {
+          "name": "Lucy",
+          "element": "Spectro",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Spectro"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Heavy DMG"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "song-of-feathered-trace",
+      "name": "Song of Feathered Trace",
+      "element": "Universal",
+      "setBonus": "2pc: Energy Regen + 10% | 5pc: Upon inflicting Havoc Bane, gain Xuanling's Feather, which grants a 20% increase in Crit. Rate and 35% increase in Heavy Attack DMG Bonus to the Resonator, lasting 15s. Upon inflicting Glacio Chafe, gain Chongming's Feather, which grants a 0.1% increase in ATK to Resonators in the team for every 1% of the Resonator's Energy Regen, up to 25%, lasting 10s.",
+      "mainEcho": "",
+      "characters": [
+        {
+          "name": "Yangyang: Xuanling",
+          "element": "Havoc",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Havoc"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Energy Recharge",
+            "Crit DMG",
+            "Crit Rate",
+            "ATK%",
+            "Heavy DMG"
+          ],
+          "targetER": "120%"
+        }
+      ]
+    },
+    {
+      "id": "wishes-of-quiet-snowfall",
+      "name": "Wishes of Quiet Snowfall",
+      "element": "Glacio",
+      "setBonus": "2pc: Glacio DMG + 10% | 5pc: Inflicting Glacio Chafe on enemies increases Glacio DMG dealt by 10% for 15s. The Resonator gains the Snowfall effect for 15s, which can be triggered once every 25s. While Snowfall is active: - Dealing Resonance Liberation DMG removes Snowfall and increases the Resonator's Crit. Rate by 25% for 6s. While the effect is active, dealing Resonance Liberation DMG extends its duration by 4s, triggered once every 0.5s, up to 6 times. - Casting Outro Skill removes Snowfall and grants 25% Glacio DMG Bonus to the incoming Resonator for 15s. When Snowfall is removed, only one of the effects above can be triggered.",
+      "mainEcho": "",
+      "characters": [
+        {
+          "name": "Hiyuki",
+          "element": "Glacio",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Glacio"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Liberation DMG"
+          ],
+          "targetER": "120%"
+        },
+        {
+          "name": "Lucilla",
+          "element": "Glacio",
+          "role": "Main DPS",
+          "costs": {
+            "4": [
+              "DMG",
+              "Crit Rate"
+            ],
+            "3": [
+              "Glacio"
+            ],
+            "1": [
+              "ATK %"
+            ]
+          },
+          "substats": [
+            "Crit Rate",
+            "Crit DMG",
+            "Energy Recharge",
+            "ATK%",
+            "Basic DMG"
+          ],
+          "targetER": "100%",
+          "alts": [
+            {
+              "set": "Moonlit Clouds",
+              "label": "Alt"
+            }
+          ]
         }
       ]
     }
