@@ -21,6 +21,7 @@ missing images both degrade gracefully.
 """
 import json
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -42,6 +43,21 @@ NAME_OVERRIDES = {
 }
 
 EXT_BY_TYPE = {"image/webp": ".webp", "image/png": ".png", "image/jpeg": ".jpg"}
+
+# Sets referenced by curators/reference sheets but not yet in data.json. Pre-staging
+# their emblems means they display the moment a character is assigned to them in the
+# sheet. Slug MUST match import_sheet.py's rule (see slugify) so the ids line up.
+EXTRA_SETS = [
+    "Freezing Frost", "Chromatic Foam", "Havoc Eclipse", "Sun-sinking Eclipse",
+    "Wishes of Quiet Snowfall", "Lingering Tunes", "Law of Harmony",
+    "Song of Feathered Trace", "Heart of Evil's Purge", "Lamp of Nether Road",
+    "Reel of Spliced Memories", "Shadow of Shattered Dreams",
+]
+
+
+def slugify(name):
+    """Mirror import_sheet.py's set-id slug so pre-staged image filenames align."""
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
 
 def file_title(set_name):
@@ -111,6 +127,14 @@ def main():
 
     doc = json.load(open(DATA))
     sets = doc["sets"] if isinstance(doc, dict) else doc
+
+    # Append pre-staged sets not yet present in data.json (by slug id).
+    existing_ids = {s["id"] for s in sets}
+    for name in EXTRA_SETS:
+        sid = slugify(name)
+        if sid not in existing_ids:
+            sets.append({"id": sid, "name": name})
+            existing_ids.add(sid)
 
     todo = []          # sets needing download: (set_id, set_name, file_title)
     skipped = []

@@ -65,6 +65,20 @@ NEW_SET_ELEMENT_MAP: Dict[str, str] = {
     "Freezing Frost":         "Glacio",
     "Sound of True Name":     "Aero",
     "Halo of Starry Radiance":"Universal",
+    # Staged 2026-07-27 — sets present in a reference sheet but not yet in the guide.
+    # Elemental values are authoritative (from cached game data); non-elemental sets
+    # default to Universal/Support and can be retuned per-set once curated.
+    "Chromatic Foam":            "Fusion",
+    "Havoc Eclipse":             "Havoc",
+    "Sun-sinking Eclipse":       "Havoc",
+    "Wishes of Quiet Snowfall":  "Glacio",
+    "Lingering Tunes":           "Support",
+    "Law of Harmony":            "Universal",
+    "Song of Feathered Trace":   "Universal",
+    "Heart of Evil's Purge":     "Universal",
+    "Lamp of Nether Road":       "Universal",
+    "Reel of Spliced Memories":  "Universal",
+    "Shadow of Shattered Dreams":"Universal",
 }
 
 # Character elements — used when building character objects.
